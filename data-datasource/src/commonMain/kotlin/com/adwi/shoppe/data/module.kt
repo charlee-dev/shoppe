@@ -7,7 +7,7 @@ import org.kodein.di.DI
 import org.kodein.di.bindSingleton
 import org.kodein.di.instance
 
-val datasourceModule = DI.Module("datasource") {
+val datasourceDataModule = DI.Module("datasourceModule") {
 
     bindSingleton { DatabaseDriverFactory(di).create() }
     bindSingleton { ShoppeDatabase(instance()) }

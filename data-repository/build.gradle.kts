@@ -7,11 +7,11 @@ kotlin {
 
         named("commonMain") {
             dependencies {
-                implementation(project(Module.Data.datasource))
+                api(project(Module.Data.datasource))
                 implementation(Libs.Kotlin.coroutines)
                 implementation(Libs.Kodein.common)
                 implementation(Libs.Kermit.common)
-                implementation(Libs.Apollo.apollo)
+                api(Libs.Apollo.apollo)
             }
         }
 

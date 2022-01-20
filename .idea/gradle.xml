@@ -11,12 +11,14 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app-android" />
             <option value="$PROJECT_DIR$/app-desktop" />
-            <option value="$PROJECT_DIR$/backend" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/data-datasource" />
             <option value="$PROJECT_DIR$/data-repository" />
             <option value="$PROJECT_DIR$/data-sdk" />
+            <option value="$PROJECT_DIR$/feature-auth" />
+            <option value="$PROJECT_DIR$/feature-library" />
             <option value="$PROJECT_DIR$/feature-root" />
+            <option value="$PROJECT_DIR$/graphql-backend" />
             <option value="$PROJECT_DIR$/ui-compose" />
             <option value="$PROJECT_DIR$/utils" />
           </set>

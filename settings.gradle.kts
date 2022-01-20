@@ -2,12 +2,14 @@ rootProject.name = "shoppe"
 
 include(
 
-    ":backend",
+    ":graphql-backend",
 
     ":app-android",
     ":app-desktop",
 
     ":feature-root",
+    ":feature-auth",
+    ":feature-library",
 
     ":data-sdk",
     ":data-datasource",

@@ -12,7 +12,7 @@ kotlin {
                 implementation(Libs.Krypto.common)
                 implementation(Libs.Kermit.common)
                 implementation(Libs.SqlDelight.coroutines)
-                implementation(Libs.Apollo.apollo)
+                api(Libs.Apollo.apollo)
             }
         }
         named("androidMain") {

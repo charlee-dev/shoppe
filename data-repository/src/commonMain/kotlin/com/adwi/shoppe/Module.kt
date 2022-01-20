@@ -1,5 +1,6 @@
 package com.adwi.shoppe
 
+import com.adwi.shoppe.data.datasourceDataModule
 import com.adwi.shoppe.repository.AuthRepository
 import com.adwi.shoppe.repository.ReviewRepository
 import com.adwi.shoppe.repository.ServiceRepository
@@ -13,7 +14,10 @@ import org.kodein.di.instance
 
 @ApolloExperimental
 @ExperimentalCoroutinesApi
-val repositoryModule = DI.Module("repository") {
+val repositoryDataModule = DI.Module("repository") {
+
+    import(datasourceDataModule)
+
     bindSingleton { AuthRepository(instance()) }
     bindSingleton { ShopRepository(instance()) }
     bindSingleton { ReviewRepository(instance()) }
