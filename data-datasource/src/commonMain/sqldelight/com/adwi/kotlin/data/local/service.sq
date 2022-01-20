@@ -1,0 +1,31 @@
+CREATE TABLE Service (
+    id TEXT NOT NULL PRIMARY KEY,
+    shopId TEXT NOT NULL,
+    name TEXT NOT NULL,
+    description TEXT NOT NULL,
+    price REAL NOT NULL,
+    duration INTEGER NOT NULL
+);
+
+insertService:
+INSERT INTO Service(id, shopId, name, description, price, duration)
+VALUES(?, ?, ?, ?, ?, ?);
+
+updateServiceById:
+UPDATE Service
+SET name = ?, description = ?, price = ?, duration = ?
+WHERE id = ?;
+
+removeAllServices:
+DELETE FROM Service;
+
+selectAllServices:
+SELECT * FROM Service;
+
+selectServiceById:
+SELECT * FROM Service
+WHERE id = ?;
+
+removeServiceById:
+DELETE FROM Service
+WHERE id = ?;

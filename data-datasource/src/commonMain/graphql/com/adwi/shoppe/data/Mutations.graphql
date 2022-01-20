@@ -1,0 +1,193 @@
+mutation signIn ($userInput: UserInput!) {
+    signIn (userInput: $userInput) {
+        token
+        user {
+            email
+            id
+            orders {
+                id
+                paid
+                purchasedAt
+                quantity
+                scheduledAt
+                serviceId
+                shopId
+                userId
+            }
+        }
+    }
+}
+
+mutation signUp ($userInput: UserInput!) {
+    signUp (userInput: $userInput) {
+        token
+        user {
+            email
+            id
+            orders {
+                id
+                paid
+                purchasedAt
+                quantity
+                scheduledAt
+                serviceId
+                shopId
+                userId
+            }
+        }
+    }
+}
+
+mutation createShop ($shopInput: ShopInput!) {
+    createShop (shopInput: $shopInput) {
+        description
+        id
+        imageUrl
+        name
+        orders {
+            id
+            paid
+            purchasedAt
+            quantity
+            scheduledAt
+            serviceId
+            shopId
+            userId
+        }
+        reviews {
+            id
+            rating
+            shopId
+            text
+            userId
+        }
+        services {
+            description
+            duration
+            id
+            name
+            price
+            shopId
+        }
+        userId
+    }
+}
+
+mutation updateShop ($shopId: String!, $shopInput: ShopInput!) {
+    updateShop (shopId: $shopId, shopInput: $shopInput) {
+        description
+        id
+        imageUrl
+        name
+        orders {
+            id
+            paid
+            purchasedAt
+            quantity
+            scheduledAt
+            serviceId
+            shopId
+            userId
+        }
+        reviews {
+            id
+            rating
+            shopId
+            text
+            userId
+        }
+        services {
+            description
+            duration
+            id
+            name
+            price
+            shopId
+        }
+        userId
+    }
+}
+
+mutation deleteShop ($shopId: String!) {
+    deleteShop (shopId: $shopId)
+}
+
+mutation createReview ($shopId: String!, $reviewInput: ReviewInput!) {
+    createReview (shopId: $shopId, reviewInput: $reviewInput) {
+        id
+        rating
+        shopId
+        text
+        userId
+    }
+}
+
+mutation updateReview ($reviewId: String!, $reviewInput: ReviewInput!) {
+    updateReview (reviewId: $reviewId, reviewInput: $reviewInput) {
+        id
+        rating
+        shopId
+        text
+        userId
+    }
+}
+
+mutation deleteReview ($reviewId: String!) {
+    deleteReview (reviewId: $reviewId)
+}
+
+mutation createOrder ($shopId: String!, $serviceid: String!, $orderInput: OrderInput!) {
+    createOrder (shopId: $shopId, serviceid: $serviceid, orderInput: $orderInput) {
+        id
+        paid
+        purchasedAt
+        quantity
+        scheduledAt
+        serviceId
+        shopId
+        userId
+    }
+}
+
+mutation updateOrder ($orderId: String!, $shopId: String!, $serviceId: String!, $orderInput: OrderInput!) {
+    updateOrder (orderId: $orderId, shopId: $shopId, serviceId: $serviceId, orderInput: $orderInput) {
+        id
+        paid
+        purchasedAt
+        quantity
+        scheduledAt
+        serviceId
+        shopId
+        userId
+    }
+}
+
+mutation deleteOrder ($orderId: String!) {
+    deleteOrder (orderId: $orderId)
+}
+
+mutation createService ($shopId: String!, $serviceInput: ServiceInput!) {
+    createService (shopId: $shopId, serviceInput: $serviceInput) {
+        description
+        duration
+        id
+        name
+        price
+        shopId
+    }
+}
+
+mutation updateService ($serviceId: String!, $shopId: String!, $serviceInput: ServiceInput!) {
+    updateService (serviceId: $serviceId, shopId: $shopId, serviceInput: $serviceInput) {
+        description
+        duration
+        id
+        name
+        price
+        shopId
+    }
+}
+
+mutation deleteService ($serviceId: String!) {
+    deleteService (serviceId: $serviceId)
+}

@@ -1,0 +1,30 @@
+CREATE TABLE Shop (
+    id TEXT NOT NULL PRIMARY KEY,
+    userId TEXT NOT NULL,
+    name TEXT NOT NULL,
+    description TEXT NOT NULL,
+    imageUrl TEXT NOT NULL
+);
+
+insertShop:
+INSERT INTO Shop(id, userId, name, description, imageUrl)
+VALUES(?, ?, ?, ?, ?);
+
+updateShopById:
+UPDATE Shop
+SET name = ?, description = ?, imageUrl = ?
+WHERE id = ?;
+
+removeAllShops:
+DELETE FROM Shop;
+
+selectAllShops:
+SELECT * FROM Shop;
+
+selectShopById:
+SELECT * FROM Shop
+WHERE id = ?;
+
+removeShopById:
+DELETE FROM Shop
+WHERE id = ?;

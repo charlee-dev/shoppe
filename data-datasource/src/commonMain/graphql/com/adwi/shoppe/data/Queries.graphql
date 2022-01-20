@@ -1,0 +1,241 @@
+query getShopById ($shopId: String!) {
+    getShopById (shopId: $shopId) {
+        description
+        id
+        imageUrl
+        name
+        orders {
+            id
+            paid
+            purchasedAt
+            quantity
+            scheduledAt
+            serviceId
+            shopId
+            userId
+        }
+        reviews {
+            id
+            rating
+            shopId
+            text
+            userId
+        }
+        services {
+            description
+            duration
+            id
+            name
+            price
+            shopId
+        }
+        userId
+    }
+}
+
+query shopsPagedByUserId ($page: Int, $size: Int) {
+    shopsPagedByUserId (page: $page, size: $size) {
+        info {
+            count
+            next
+            pages
+            prev
+        }
+        results {
+            description
+            id
+            imageUrl
+            name
+            orders {
+                id
+                paid
+                purchasedAt
+                quantity
+                scheduledAt
+                serviceId
+                shopId
+                userId
+            }
+            reviews {
+                id
+                rating
+                shopId
+                text
+                userId
+            }
+            services {
+                description
+                duration
+                id
+                name
+                price
+                shopId
+            }
+            userId
+        }
+    }
+}
+
+query getReview ($reviewId: String!) {
+    getReview (reviewId: $reviewId) {
+        id
+        rating
+        shopId
+        text
+        userId
+    }
+}
+
+query reviewsPagedByShopId ($shopId: String!, $page: Int, $size: Int) {
+    reviewsPagedByShopId (shopId: $shopId, page: $page, size: $size) {
+        info {
+            count
+            next
+            pages
+            prev
+        }
+        results {
+            id
+            rating
+            shopId
+            text
+            userId
+        }
+    }
+}
+
+query getProfile {
+    getProfile {
+        shops {
+            description
+            id
+            imageUrl
+            name
+            orders {
+                id
+                paid
+                purchasedAt
+                quantity
+                scheduledAt
+                serviceId
+                shopId
+                userId
+            }
+            reviews {
+                id
+                rating
+                shopId
+                text
+                userId
+            }
+            services {
+                description
+                duration
+                id
+                name
+                price
+                shopId
+            }
+            userId
+        }
+        user {
+            email
+            id
+            orders {
+                id
+                paid
+                purchasedAt
+                quantity
+                scheduledAt
+                serviceId
+                shopId
+                userId
+            }
+        }
+    }
+}
+
+query getOrder ($orderId: String!) {
+    getOrder (orderId: $orderId) {
+        id
+        paid
+        purchasedAt
+        quantity
+        scheduledAt
+        serviceId
+        shopId
+        userId
+    }
+}
+
+query ordersPagedByUserId ($page: Int, $size: Int) {
+    ordersPagedByUserId (page: $page, size: $size) {
+        info {
+            count
+            next
+            pages
+            prev
+        }
+        results {
+            id
+            paid
+            purchasedAt
+            quantity
+            scheduledAt
+            serviceId
+            shopId
+            userId
+        }
+    }
+}
+
+query ordersPagedByShopId ($shopId: String!, $page: Int, $size: Int) {
+    ordersPagedByShopId (shopId: $shopId, page: $page, size: $size) {
+        info {
+            count
+            next
+            pages
+            prev
+        }
+        results {
+            id
+            paid
+            purchasedAt
+            quantity
+            scheduledAt
+            serviceId
+            shopId
+            userId
+        }
+    }
+}
+
+query getService ($serviceId: String!) {
+    getService (serviceId: $serviceId) {
+        description
+        duration
+        id
+        name
+        price
+        shopId
+    }
+}
+
+query servicePagedByShopId ($shopId: String!, $page: Int, $size: Int) {
+    servicePagedByShopId (shopId: $shopId, page: $page, size: $size) {
+        info {
+            count
+            next
+            pages
+            prev
+        }
+        results {
+            description
+            duration
+            id
+            name
+            price
+            shopId
+        }
+    }
+}

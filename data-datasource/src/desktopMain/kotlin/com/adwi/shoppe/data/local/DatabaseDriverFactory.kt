@@ -1,0 +1,15 @@
+package com.adwi.shoppe.data.local
+
+import com.squareup.sqldelight.db.SqlDriver
+import com.squareup.sqldelight.sqlite.driver.JdbcSqliteDriver
+import org.kodein.di.DI
+import org.kodein.di.DIAware
+
+actual class DatabaseDriverFactory actual constructor(override val di: DI): DIAware {
+
+    actual fun create(): SqlDriver {
+        val driver = JdbcSqliteDriver(JdbcSqliteDriver.IN_MEMORY)
+        ShoppeDatabase.Schema.create(driver)
+        return driver
+    }
+}

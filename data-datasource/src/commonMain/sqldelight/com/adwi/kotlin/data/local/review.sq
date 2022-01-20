@@ -1,0 +1,30 @@
+CREATE TABLE Review (
+    id TEXT NOT NULL PRIMARY KEY,
+    shopId TEXT NOT NULL,
+    userId TEXT NOT NULL,
+    text TEXT NOT NULL,
+    rating INTEGER NOT NULL
+);
+
+insertReview:
+INSERT INTO Review(id, shopId, userId, text, rating)
+VALUES(?, ?, ?, ?, ?);
+
+updateReviewById:
+UPDATE Review
+SET text = ?, rating = ?
+WHERE id = ?;
+
+removeAllReviews:
+DELETE FROM Review;
+
+selectAllReviews:
+SELECT * FROM Review;
+
+selectReviewById:
+SELECT * FROM Review
+WHERE id = ?;
+
+removeReviewById:
+DELETE FROM Review
+WHERE id = ?;

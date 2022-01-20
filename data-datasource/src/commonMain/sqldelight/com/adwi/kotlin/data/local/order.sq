@@ -1,0 +1,33 @@
+CREATE TABLE ShopOrder (
+    id TEXT NOT NULL PRIMARY KEY,
+    shopId TEXT NOT NULL,
+    userId TEXT NOT NULL,
+    serviceId TEXT NOT NULL,
+    quantity REAL NOT NULL,
+    purchasedAt REAL NOT NULL,
+    scheduledAt REAL NOT NULL,
+    paid INTEGER NOT NULL
+);
+
+insertShopOrder:
+INSERT INTO ShopOrder(id, userId, shopId, serviceId, quantity, purchasedAt, scheduledAt, paid)
+VALUES(?, ?, ?, ?, ?, ?, ?, ?);
+
+updateShopOrderById:
+UPDATE ShopOrder
+SET quantity = ?, purchasedAt = ?, scheduledAt = ?, paid = ?
+WHERE id = ?;
+
+removeAllShopOrders:
+DELETE FROM ShopOrder;
+
+selectAllShopOrders:
+SELECT * FROM ShopOrder;
+
+selectShopOrderById:
+SELECT * FROM ShopOrder
+WHERE id = ?;
+
+removeShopOrderById:
+DELETE FROM ShopOrder
+WHERE id = ?;
