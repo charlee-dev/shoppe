@@ -24,15 +24,17 @@ object Module {
     object Feature {
         const val root = ":feature-root"
         const val auth = ":feature-auth"
-        const val library = ":feature-library"
-        const val top = ":feature-top"
-        const val profile = ":feature-profile"
-        const val scrobbles = ":feature-scrobbles"
-        const val shelf = ":feature-shelf"
-        const val browser = ":feature-browser"
-        const val nowPlaying = ":feature-now-playing"
+        const val navigation = ":feature-navigation"
+
+        const val appBar = ":feature-appbar"
+        const val dashboard = ":feature-dashboard"
+        const val manager = ":feature-manager"
+        const val planner = ":feature-planner"
         const val settings = ":feature-settings"
+        const val details = ":feature-details"
         const val user = ":feature-user"
+
+        const val top = ":feature-top"
         const val menu = ":feature-menu"
     }
 

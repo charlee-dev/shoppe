@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -16,8 +17,13 @@
             <option value="$PROJECT_DIR$/data-repository" />
             <option value="$PROJECT_DIR$/data-sdk" />
             <option value="$PROJECT_DIR$/feature-auth" />
-            <option value="$PROJECT_DIR$/feature-library" />
+            <option value="$PROJECT_DIR$/feature-dashboard" />
+            <option value="$PROJECT_DIR$/feature-details" />
+            <option value="$PROJECT_DIR$/feature-manager" />
+            <option value="$PROJECT_DIR$/feature-navigation" />
+            <option value="$PROJECT_DIR$/feature-planner" />
             <option value="$PROJECT_DIR$/feature-root" />
+            <option value="$PROJECT_DIR$/feature-settings" />
             <option value="$PROJECT_DIR$/graphql-backend" />
             <option value="$PROJECT_DIR$/ui-compose" />
             <option value="$PROJECT_DIR$/utils" />

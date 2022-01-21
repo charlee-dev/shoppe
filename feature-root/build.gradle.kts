@@ -8,12 +8,13 @@ kotlin {
 
         named("commonMain") {
             dependencies {
-                
-                implementation(project(Module.Data.sdk))
-                implementation(project(Module.Data.repository))
+
+                api(project(Module.Data.sdk))
+                api(project(Module.Data.repository))
 
                 implementation(project(Module.Feature.auth))
-                implementation(project(Module.Feature.library))
+                implementation(project(Module.Feature.navigation))
+                implementation(project(Module.Feature.dashboard))
 
                 implementation(Libs.ArkIvanov.MVIKotlin.main)
                 implementation(Libs.ArkIvanov.Essenty.parcelable)

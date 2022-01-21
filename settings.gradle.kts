@@ -9,7 +9,12 @@ include(
 
     ":feature-root",
     ":feature-auth",
-    ":feature-library",
+    ":feature-navigation",
+    ":feature-dashboard",
+    ":feature-manager",
+    ":feature-planner",
+    ":feature-settings",
+    ":feature-details",
 
     ":data-sdk",
     ":data-datasource",

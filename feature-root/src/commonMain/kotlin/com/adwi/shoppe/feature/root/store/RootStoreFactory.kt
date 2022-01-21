@@ -45,13 +45,13 @@ internal class RootStoreFactory(
 
         override suspend fun executeIntent(intent: RootStore.Intent, getState: () -> Unit) {
             when (intent) {
-                is RootStore.Intent.signIn -> {
+                is RootStore.Intent.SignIn -> {
                     val result = authRepository.signIn(UserInput(intent.email, intent.password))
                     if (result.isEmpty()) {
                         prefsStore.token = result
                     }
                 }
-                is RootStore.Intent.signUp -> {
+                is RootStore.Intent.SignUp -> {
                     val result = authRepository.signUp(UserInput(intent.email, intent.password))
                     if (result.isEmpty()) {
                         prefsStore.token = result

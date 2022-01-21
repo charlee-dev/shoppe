@@ -1,6 +1,8 @@
 package com.adwi.shoppe.feature.root
 
 import com.adwi.shoppe.data.sdk.sdkDataModule
+import com.adwi.shoppe.feature.auth.authComponentModule
+import com.adwi.shoppe.feature.navigation.navigationComponentModule
 import com.adwi.shoppe.repositoryDataModule
 import com.apollographql.apollo3.annotations.ApolloExperimental
 import com.arkivanov.decompose.ComponentContext
@@ -20,6 +22,9 @@ val rootComponentModule = DI.Module("rootComponent") {
 
     import(repositoryDataModule)
     importOnce(sdkDataModule)
+
+    import(authComponentModule)
+    import(navigationComponentModule)
 
     bindSingleton { DefaultStoreFactory() }
 

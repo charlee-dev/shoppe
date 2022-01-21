@@ -11,6 +11,17 @@ kotlin {
 
                 implementation(project(Module.utils))
 
+                with(Module.Feature) {
+                    implementation(project(root))
+                    implementation(project(auth))
+                    implementation(project(navigation))
+                    implementation(project(dashboard))
+                    implementation(project(manager))
+                    implementation(project(planner))
+                    implementation(project(settings))
+                    implementation(project(details))
+                }
+
                 with(compose) {
                     implementation(ui)
                     implementation(preview)

@@ -1,7 +1,7 @@
 package com.adwi.shoppe.feature.root
 
 import com.adwi.shoppe.feature.auth.AuthComponent
-import com.adwi.shoppe.feature.library.LibraryComponent
+import com.adwi.shoppe.feature.navigation.NavigationComponent
 import com.adwi.shoppe.feature.root.RootComponent.Child
 import com.adwi.shoppe.feature.root.store.RootStore
 import com.adwi.shoppe.feature.root.store.RootStoreFactory
@@ -32,7 +32,7 @@ internal class RootComponentImpl(
     private val componentContext: ComponentContext,
 ) : RootComponent, DIAware, ComponentContext by componentContext {
 
-    private val library by factory<ComponentContext, LibraryComponent>()
+    private val library by factory<ComponentContext, NavigationComponent>()
     private val auth by factory<ComponentContext, AuthComponent>()
 
     // Assigning routes to Config directions
@@ -64,11 +64,11 @@ internal class RootComponentImpl(
     override val routerState: Value<RouterState<*, Child>> = router.state
 
     override fun onSignInUserInputReceived(email: String, password: String) {
-        store.accept(RootStore.Intent.signIn(email, password))
+        store.accept(RootStore.Intent.SignIn(email, password))
     }
 
     override fun onSignOutUserInputReceived(email: String, password: String) {
-        store.accept(RootStore.Intent.signUp(email, password))
+        store.accept(RootStore.Intent.SignUp(email, password))
     }
 
     // Possible two routes in Root are Login screen or Library screen when signed in
