@@ -26,7 +26,7 @@ object Module {
         const val auth = ":feature-auth"
         const val navigation = ":feature-navigation"
 
-        const val appBar = ":feature-appbar"
+        const val splash = ":feature-splash"
         const val dashboard = ":feature-dashboard"
         const val manager = ":feature-manager"
         const val planner = ":feature-planner"

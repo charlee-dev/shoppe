@@ -13,6 +13,7 @@ kotlin {
 
                 with(Module.Feature) {
                     implementation(project(root))
+                    implementation(project(splash))
                     implementation(project(auth))
                     implementation(project(navigation))
                     implementation(project(dashboard))

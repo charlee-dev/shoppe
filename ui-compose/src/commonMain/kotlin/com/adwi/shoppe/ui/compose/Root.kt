@@ -18,8 +18,9 @@ fun RootContent(
     Children(component.routerState) {
         it.instance.let { child ->
             when (child) {
-                is RootComponent.Child.Library -> NavigationContent(child.component, topInset, bottomInset)
+                is RootComponent.Child.Splash -> SplashContent(child.component)
                 is RootComponent.Child.Auth -> AuthContent(child.component, topInset, bottomInset)
+                is RootComponent.Child.Library -> NavigationContent(child.component, topInset, bottomInset)
             }
         }
     }

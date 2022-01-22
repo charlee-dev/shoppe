@@ -1,5 +1,6 @@
 package com.adwi.shoppe.feature.navigation
 
+import co.touchlab.kermit.Logger
 import com.adwi.shoppe.feature.dashboard.DashboardComponent
 import com.adwi.shoppe.feature.manager.ManagerComponent
 import com.adwi.shoppe.feature.navigation.NavigationComponent.Child
@@ -7,7 +8,7 @@ import com.adwi.shoppe.feature.planner.PlannerComponent
 import com.adwi.shoppe.feature.settings.SettingsComponent
 import com.arkivanov.decompose.ComponentContext
 import com.arkivanov.decompose.router.RouterState
-import com.arkivanov.decompose.router.push
+import com.arkivanov.decompose.router.replaceCurrent
 import com.arkivanov.decompose.router.router
 import com.arkivanov.decompose.value.Value
 import com.arkivanov.decompose.value.operator.map
@@ -45,7 +46,8 @@ class NavigationComponentImpl(
     }
 
     override fun onChildSelect(index: Int) {
-        router.push(
+        Logger.i("Selected $index")
+        router.replaceCurrent(
             when (index) {
                 0 -> Config.Dashboard
                 1 -> Config.Manager

@@ -1,10 +1,12 @@
 package com.adwi.shoppe.feature.root
 
+import co.touchlab.kermit.Logger
 import com.adwi.shoppe.feature.auth.AuthComponent
 import com.adwi.shoppe.feature.navigation.NavigationComponent
 import com.adwi.shoppe.feature.root.RootComponent.Child
 import com.adwi.shoppe.feature.root.store.RootStore
 import com.adwi.shoppe.feature.root.store.RootStoreFactory
+import com.adwi.shoppe.feature.splash.SplashComponent
 import com.adwi.shoppe.utils.getStore
 import com.apollographql.apollo3.annotations.ApolloExperimental
 import com.arkivanov.decompose.ComponentContext
@@ -32,19 +34,23 @@ internal class RootComponentImpl(
     private val componentContext: ComponentContext,
 ) : RootComponent, DIAware, ComponentContext by componentContext {
 
+    private val splash by factory<ComponentContext, SplashComponent>()
     private val library by factory<ComponentContext, NavigationComponent>()
     private val auth by factory<ComponentContext, AuthComponent>()
 
-    // Assigning routes to Config directions
-    private val router = router<Config, RootComponent.Child>(
-        initialConfiguration = Config.Library,
+    private val router = router<Config, Child>(
+        initialConfiguration = Config.Splash,
         handleBackButton = true
     ) { configuration, componentContext ->
+        Logger.v("router $configuration")
         when (configuration) {
+            is Config.Splash -> Child.Splash(splash(componentContext))
             is Config.Library -> Child.Library(library(componentContext))
             is Config.Auth -> Child.Auth(auth(componentContext))
         }
     }
+
+    override val routerState: Value<RouterState<*, Child>> = router.state
 
     // Keeps root state and tracks Auth app state
     private val store = instanceKeeper.getStore {
@@ -52,7 +58,8 @@ internal class RootComponentImpl(
             storeFactory = direct.instance(),
             prefsStore = direct.instance(),
             authRepository = direct.instance(),
-            onSessionChanged = { isActive ->
+            onAuthenticationChanged = { isActive ->
+                Logger.v("store = isSignedIn is $isActive")
                 if (isActive)
                     setConfig<Child.Library>(Config.Library)
                 else
@@ -61,18 +68,19 @@ internal class RootComponentImpl(
         ).create()
     }
 
-    override val routerState: Value<RouterState<*, Child>> = router.state
-
-    override fun onSignInUserInputReceived(email: String, password: String) {
-        store.accept(RootStore.Intent.SignIn(email, password))
+    init {
+        checkUserState()
     }
 
-    override fun onSignOutUserInputReceived(email: String, password: String) {
-        store.accept(RootStore.Intent.SignUp(email, password))
+    override fun checkUserState() {
+        store.accept(RootStore.Intent.CheckUserState)
     }
 
     // Possible two routes in Root are Login screen or Library screen when signed in
     private sealed class Config : Parcelable {
+        @Parcelize
+        object Splash : Config()
+
         @Parcelize
         object Library : Config()
 

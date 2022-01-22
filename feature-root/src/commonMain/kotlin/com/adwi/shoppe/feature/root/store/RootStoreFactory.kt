@@ -1,6 +1,6 @@
 package com.adwi.shoppe.feature.root.store
 
-import com.adwi.shoppe.data.remote.type.UserInput
+import co.touchlab.kermit.Logger
 import com.adwi.shoppe.data.sdk.prefs.PrefsStore
 import com.adwi.shoppe.repository.AuthRepository
 import com.adwi.shoppe.utils.AppCoroutineDispatcher
@@ -8,11 +8,12 @@ import com.apollographql.apollo3.annotations.ApolloExperimental
 import com.arkivanov.mvikotlin.core.store.SimpleBootstrapper
 import com.arkivanov.mvikotlin.core.store.Store
 import com.arkivanov.mvikotlin.core.store.StoreFactory
-import com.arkivanov.mvikotlin.extensions.coroutines.SuspendExecutor
+import com.arkivanov.mvikotlin.extensions.coroutines.CoroutineExecutor
 import com.russhwolf.settings.ExperimentalSettingsApi
 import com.russhwolf.settings.ExperimentalSettingsImplementation
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 
 @ExperimentalSettingsImplementation
 @ExperimentalSettingsApi
@@ -22,7 +23,7 @@ internal class RootStoreFactory(
     private val storeFactory: StoreFactory,
     private val prefsStore: PrefsStore,
     private val authRepository: AuthRepository,
-    private val onSessionChanged: (Boolean) -> Unit,
+    private val onAuthenticationChanged: (Boolean) -> Unit,
 ) {
     fun create(): RootStore =
         object : RootStore, Store<RootStore.Intent, Unit, Unit> by storeFactory.create(
@@ -32,30 +33,19 @@ internal class RootStoreFactory(
             executorFactory = ::ExecutorImpl,
         ) {}
 
-    private inner class ExecutorImpl : SuspendExecutor<RootStore.Intent, Unit, Unit, Unit, Unit>(
+    private inner class ExecutorImpl : CoroutineExecutor<RootStore.Intent, Unit, Unit, Unit, Unit>(
         AppCoroutineDispatcher.Main
     ) {
         // Monitors authentication state
-        override suspend fun executeAction(action: Unit, getState: () -> Unit) {
-            prefsStore.isSessionActive.collect { isActive ->
-                if (!isActive) authRepository.deleteUserState()
-                onSessionChanged(isActive)
-            }
-        }
-
-        override suspend fun executeIntent(intent: RootStore.Intent, getState: () -> Unit) {
-            when (intent) {
-                is RootStore.Intent.SignIn -> {
-                    val result = authRepository.signIn(UserInput(intent.email, intent.password))
-                    if (result.isEmpty()) {
-                        prefsStore.token = result
+        override fun executeAction(action: Unit, getState: () -> Unit) {
+            scope.launch {
+                prefsStore.tokenAsFlow.collect { isSignedIn ->
+                    Logger.v("token = $isSignedIn")
+                    if (!isSignedIn) {
+                        Logger.v("deleting userState")
+                        authRepository.deleteUserState()
                     }
-                }
-                is RootStore.Intent.SignUp -> {
-                    val result = authRepository.signUp(UserInput(intent.email, intent.password))
-                    if (result.isEmpty()) {
-                        prefsStore.token = result
-                    }
+                    onAuthenticationChanged(isSignedIn)
                 }
             }
         }

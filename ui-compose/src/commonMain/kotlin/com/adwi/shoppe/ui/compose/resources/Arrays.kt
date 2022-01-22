@@ -1,28 +1,25 @@
 package com.adwi.shoppe.ui.compose.resources
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.AccountCircle
-import androidx.compose.material.icons.rounded.Album
-import androidx.compose.material.icons.rounded.Audiotrack
-import androidx.compose.material.icons.rounded.Face
-import androidx.compose.material.icons.rounded.History
+import androidx.compose.material.icons.rounded.Dashboard
+import androidx.compose.material.icons.rounded.ManageAccounts
+import androidx.compose.material.icons.rounded.Schedule
+import androidx.compose.material.icons.rounded.Settings
 
 object Arrays {
 
     val shelves = arrayOf(
-        "Resents",
-        "Artists",
-        "Albums",
-        "Tracks",
-        "Profile"
+        "Dashboard",
+        "Manager",
+        "Planner",
+        "Settings",
     )
 
     val shelfIcons = arrayOf(
-        Icons.Rounded.History,
-        Icons.Rounded.Face,
-        Icons.Rounded.Album,
-        Icons.Rounded.Audiotrack,
-        Icons.Rounded.AccountCircle
+        Icons.Rounded.Dashboard,
+        Icons.Rounded.ManageAccounts,
+        Icons.Rounded.Schedule,
+        Icons.Rounded.Settings,
     )
 
     val periods = arrayOf(

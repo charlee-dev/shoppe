@@ -12,5 +12,5 @@ interface DashboardComponent {
         data class Data2(val name: String) : Child()
     }
 
-    fun onData()
+    fun singOut()
 }

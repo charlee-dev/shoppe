@@ -13,6 +13,7 @@ kotlin {
                 api(project(Module.Data.repository))
 
                 implementation(project(Module.Feature.auth))
+                implementation(project(Module.Feature.splash))
                 implementation(project(Module.Feature.navigation))
                 implementation(project(Module.Feature.dashboard))
 

@@ -2,6 +2,7 @@ package com.adwi.shoppe.ui.compose
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.Button
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -17,6 +18,11 @@ fun DashboardContent(
         content = {
             Box(modifier = Modifier.fillMaxSize()) {
                 Text(text = "Dashboard", modifier = Modifier.align(Alignment.Center))
+                Button(
+                    onClick = { component.singOut() }
+                ) {
+                    Text(text = "Sign out")
+                }
             }
         }
     )

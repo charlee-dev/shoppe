@@ -8,6 +8,7 @@ include(
     ":app-desktop",
 
     ":feature-root",
+    ":feature-splash",
     ":feature-auth",
     ":feature-navigation",
     ":feature-dashboard",

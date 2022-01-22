@@ -9,6 +9,7 @@ kotlin {
             dependencies {
                 implementation(Libs.Kodein.common)
                 implementation(Libs.ArkIvanov.Decompose.common)
+                api(Libs.Kermit.common)
             }
         }
     }

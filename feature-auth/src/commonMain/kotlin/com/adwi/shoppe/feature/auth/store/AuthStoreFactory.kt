@@ -68,8 +68,6 @@ internal class AuthStoreFactory(
         ) {
             launch {
                 authRepository.signIn(UserInput(email, password)).also { token ->
-                    prefs.login = email
-                    prefs.password = password
                     prefs.token = token
                 }
             }
@@ -81,8 +79,6 @@ internal class AuthStoreFactory(
         ) {
             launch {
                 authRepository.signUp(UserInput(email, password)).also { token ->
-                    prefs.login = email
-                    prefs.password = password
                     prefs.token = token
                 }
             }
