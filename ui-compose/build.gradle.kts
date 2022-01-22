@@ -25,11 +25,10 @@ kotlin {
 
                 with(compose) {
                     implementation(ui)
-                    implementation(preview)
                     implementation(runtime)
-                    implementation(material)
+                    api(material)
                     implementation(uiTooling)
-                    implementation(animation)
+                    api(animation)
                     implementation(foundation)
                     implementation(animationGraphics)
                     implementation(materialIconsExtended)

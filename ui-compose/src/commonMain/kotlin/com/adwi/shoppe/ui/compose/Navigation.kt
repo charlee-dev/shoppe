@@ -1,95 +1,105 @@
 package com.adwi.shoppe.ui.compose
 
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.BottomNavigation
-import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.Icon
 import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.Alignment
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import com.adwi.shoppe.feature.navigation.NavigationComponent
 import com.adwi.shoppe.feature.navigation.NavigationComponent.Child
+import com.adwi.shoppe.ui.compose.composables.ShoppeBottomNav
+import com.adwi.shoppe.ui.compose.composables.SideMenu
+import com.adwi.shoppe.ui.compose.resources.HomeSections
 import com.adwi.shoppe.ui.compose.resources.Resources
+import com.adwi.shoppe.ui.compose.util.WindowSize
+import com.adwi.shoppe.ui.compose.util.getWindowSizeClass
 import com.arkivanov.decompose.extensions.compose.jetbrains.Children
 import com.arkivanov.decompose.extensions.compose.jetbrains.subscribeAsState
 
-@OptIn(ExperimentalMaterialApi::class)
+@ExperimentalAnimationApi
+@ExperimentalMaterialApi
 @Composable
 fun NavigationContent(
     component: NavigationComponent,
+    windowWidth: Dp,
     topInset: Dp,
     bottomInset: Dp,
 ) {
-    Box {
-        Scaffold(
-            modifier = Modifier.padding(bottom = Resources.dimens.barHeight + bottomInset),
-            content = {
-                LibraryBody(
-                    component = component,
-                    topInset = topInset
-                )
-            },
-            scaffoldState = rememberScaffoldState(),
-        )
+    BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
+        val width by remember { mutableStateOf(windowWidth) }
+        val windowSize = getWindowSizeClass(width)
 
-        LibraryBottomBar(
-            component = component,
-            bottomInset = bottomInset,
-            modifier = Modifier.align(Alignment.BottomCenter)
-        )
+        val navItems = HomeSections.values().toList()
+        val activeIndex by component.activeChildIndex.subscribeAsState()
+
+        Box {
+            Scaffold(
+                modifier = Modifier
+                    .padding(
+                        bottom = if (windowSize == WindowSize.Expanded) 0.dp else Resources.dimens.barHeight + bottomInset
+                    ),
+                content = {
+                    LibraryBody(
+                        component = component,
+                        paddingValues = when (windowSize) {
+                            WindowSize.Compact -> PaddingValues(top = topInset)
+                            WindowSize.Medium -> PaddingValues(top = topInset)
+                            WindowSize.Expanded -> PaddingValues(start = Resources.dimens.sideMenuWidth)
+                        }
+                    )
+                },
+                scaffoldState = rememberScaffoldState(),
+            )
+            when (windowSize) {
+                WindowSize.Compact -> ShoppeBottomNav(
+                    items = navItems,
+                    currentIndex = activeIndex,
+                    onIndexSelected = { component.onChildSelect(it) },
+                    paddingValues = PaddingValues(bottom = bottomInset + 16.dp, start = 32.dp, end = 32.dp),
+                )
+                WindowSize.Medium -> ShoppeBottomNav(
+                    items = navItems,
+                    currentIndex = activeIndex,
+                    onIndexSelected = { component.onChildSelect(it) },
+                    paddingValues = PaddingValues(bottom = bottomInset + 16.dp, start = 32.dp, end = 32.dp),
+                )
+                WindowSize.Expanded -> SideMenu(
+                    items = navItems,
+                    currentIndex = activeIndex,
+                    onIndexSelected = { component.onChildSelect(it) },
+                )
+            }
+
+        }
     }
 }
 
 @Composable
 private fun LibraryBody(
     component: NavigationComponent,
-    topInset: Dp,
+    paddingValues: PaddingValues,
 ) {
-    Children(component.routerState) {
-        it.instance.let { child ->
-            when (child) {
-                is Child.Dashboard -> DashboardContent(child.component)
-                is Child.Manager -> ManagerContent(child.component)
-                is Child.Planner -> PlannerContent(child.component)
-                is Child.Settings -> SettingsContent(child.component)
+    Box(modifier = Modifier.padding(paddingValues = paddingValues)) {
+        Children(component.routerState) {
+            it.instance.let { child ->
+                when (child) {
+                    is Child.Dashboard -> DashboardContent(child.component)
+                    is Child.Manager -> ManagerContent(child.component)
+                    is Child.Planner -> PlannerContent(child.component)
+                    is Child.Settings -> SettingsContent(child.component)
+                }
             }
         }
     }
 }
-
-@Composable
-private fun LibraryBottomBar(
-    component: NavigationComponent,
-    bottomInset: Dp,
-    modifier: Modifier = Modifier,
-) {
-    val activeIndex by component.activeChildIndex.subscribeAsState()
-
-    BottomNavigation(
-        modifier = modifier.height(Resources.dimens.barHeight + bottomInset)
-    ) {
-        Resources.arrays.shelves.forEachIndexed { index, shelfTitle ->
-            BottomNavigationItem(
-                onClick = { component.onChildSelect(index) },
-                selected = index == activeIndex,
-                modifier = Modifier.padding(bottom = bottomInset),
-                label = { Text(shelfTitle) },
-                icon = {
-                    Icon(
-                        contentDescription = shelfTitle,
-                        imageVector = Resources.arrays.shelfIcons[index]
-                    )
-                }
-            )
-        }
-    }
-}
-
