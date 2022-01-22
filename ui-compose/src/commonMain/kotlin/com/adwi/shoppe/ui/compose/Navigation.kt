@@ -49,8 +49,9 @@ fun NavigationContent(
 
         Scaffold(
             modifier = Modifier
+                .fillMaxSize()
                 .padding(
-                    bottom = if (windowSize == WindowSize.Expanded) 0.dp else Resources.dimens.barHeight + bottomInset
+                    bottom = if (windowSize == WindowSize.Expanded) 0.dp else bottomInset
                 ),
             scaffoldState = rememberScaffoldState(),
         ) {
@@ -94,7 +95,7 @@ fun WindowSizedContainer(
                 items = navItems,
                 currentIndex = currentIndex,
                 onIndexSelected = onIndexSelected,
-                paddingValues = PaddingValues(bottom = 16.dp, start = 16.dp, end = 16.dp),
+                paddingValues = PaddingValues(),
                 modifier = Modifier.align(Alignment.BottomCenter)
             )
         }
