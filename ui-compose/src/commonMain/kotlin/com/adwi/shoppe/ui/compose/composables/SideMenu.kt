@@ -1,5 +1,6 @@
 package com.adwi.shoppe.ui.compose.composables
 
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Box
@@ -45,24 +46,27 @@ fun SideMenu(
     currentIndex: Int,
     onIndexSelected: (Int) -> Unit,
     width: Dp = Resources.dimens.sideMenuWidth,
+    visible: Boolean = true,
 ) {
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = modifier
-            .fillMaxHeight()
-            .width(width)
-            .padding(horizontal = 16.dp)
-    ) {
-        MenuAppHeader()
-        items.forEach { item ->
-            MenuItem(
-                text = item.name,
-                icon = item.icon,
-                isSelected = item.index == currentIndex,
-                onClick = { onIndexSelected(item.index) },
-                modifier = Modifier
-            )
-            Spacer(Modifier.size(16.dp))
+    AnimatedVisibility(visible) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = modifier
+                .fillMaxHeight()
+                .width(width)
+                .padding(horizontal = 16.dp)
+        ) {
+            MenuAppHeader()
+            items.forEach { item ->
+                MenuItem(
+                    text = item.name,
+                    icon = item.icon,
+                    isSelected = item.index == currentIndex,
+                    onClick = { onIndexSelected(item.index) },
+                    modifier = Modifier
+                )
+                Spacer(Modifier.size(16.dp))
+            }
         }
     }
 }

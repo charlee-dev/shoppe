@@ -12,6 +12,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import com.adwi.shoppe.feature.dashboard.DashboardComponent
 
 @Composable
@@ -19,7 +20,7 @@ fun DashboardContent(
     component: DashboardComponent,
 ) {
     Scaffold(
-
+        backgroundColor = Color.Transparent,
     ) {
         BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
             val size by remember { mutableStateOf(this.maxWidth) }

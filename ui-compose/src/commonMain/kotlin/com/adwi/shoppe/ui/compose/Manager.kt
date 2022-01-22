@@ -6,6 +6,7 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import com.adwi.shoppe.feature.manager.ManagerComponent
 import com.adwi.shoppe.ui.compose.composables.ComingSoonText
 
@@ -14,13 +15,13 @@ fun ManagerContent(
     component: ManagerComponent,
 ) {
     Scaffold(
-        content = {
-            Box(modifier = Modifier.fillMaxSize()) {
-                ComingSoonText(
-                    text = "Planner",
-                    modifier = Modifier.align(Alignment.Center)
-                )
-            }
+        backgroundColor = Color.Transparent,
+    ) {
+        Box(modifier = Modifier.fillMaxSize()) {
+            ComingSoonText(
+                text = "Manager",
+                modifier = Modifier.align(Alignment.Center)
+            )
         }
-    )
+    }
 }

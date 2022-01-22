@@ -58,7 +58,7 @@ fun ComingSoonText(
         ) {
             Text(
                 text = "$text coming here soon..",
-                style = MaterialTheme.typography.h2.copy(color = MaterialTheme.colors.onSurface),
+                style = MaterialTheme.typography.body2.copy(color = MaterialTheme.colors.onSurface),
                 modifier = Modifier
                     .padding(32.dp)
                     .alpha(.7f),
