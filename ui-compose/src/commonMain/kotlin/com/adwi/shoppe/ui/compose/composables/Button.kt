@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
@@ -26,13 +27,13 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ShoppeButton(
     modifier: Modifier = Modifier,
-    layoutId: String = "",
     label: @Composable () -> Unit,
     onClick: () -> Unit,
-    contentColor: Color = MaterialTheme.colors.onPrimary,
     shape: Shape = RoundedCornerShape(percent = 20),
     elevation: Dp = 10.dp,
     buttonColor: Color = MaterialTheme.colors.primary,
+    contentColor: Color = MaterialTheme.colors.onPrimary,
+    isLoading: Boolean = false,
 ) {
 
     val interactionSource = remember { MutableInteractionSource() }
@@ -62,7 +63,11 @@ fun ShoppeButton(
             ),
             modifier = Modifier.fillMaxSize(),
         ) {
-            label()
+            if (isLoading) {
+                CircularProgressIndicator(color = contentColor)
+            } else {
+                label()
+            }
         }
     }
 }
