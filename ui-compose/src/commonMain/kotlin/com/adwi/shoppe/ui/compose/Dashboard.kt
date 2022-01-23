@@ -5,13 +5,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
 import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import com.adwi.shoppe.feature.dashboard.DashboardComponent
 import com.adwi.shoppe.feature.dashboard.DashboardComponent.Model
 import com.adwi.shoppe.ui.compose.composables.DashboardGreeting
@@ -44,7 +44,7 @@ fun DashboardBody(
     val shops by model.shopItems.collectAsState(emptyList())
 
     Scaffold(
-        backgroundColor = Color.Transparent,
+        backgroundColor = MaterialTheme.colors.surface,
     ) {
         Column(modifier = modifier.fillMaxSize()) {
             DashboardGreeting(

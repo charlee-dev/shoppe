@@ -89,6 +89,7 @@ fun WindowSizedContainer(
         WindowSize.Compact -> Box(modifier = Modifier
             .fillMaxSize()
         ) {
+            content()
             ShoppeBottomNav(
                 items = navItems,
                 currentIndex = currentIndex,
@@ -96,11 +97,11 @@ fun WindowSizedContainer(
                 paddingValues = PaddingValues(bottom = 16.dp, start = 16.dp, end = 16.dp),
                 modifier = Modifier.align(Alignment.BottomCenter)
             )
-            content()
         }
         WindowSize.Medium -> Box(modifier = Modifier
             .fillMaxSize()
         ) {
+            content()
             ShoppeBottomNav(
                 items = navItems,
                 currentIndex = currentIndex,
@@ -108,7 +109,6 @@ fun WindowSizedContainer(
                 paddingValues = PaddingValues(start = 16.dp, end = 16.dp),
                 modifier = Modifier.align(Alignment.BottomCenter)
             )
-            content()
         }
         WindowSize.Expanded -> Row(
             modifier = Modifier.fillMaxSize()

@@ -82,12 +82,13 @@ fun DashboardShopPanelItem(
     shop: DashboardComponent.ShopItem,
     onShopClick: () -> Unit,
     shape: Shape = Resources.shapes.medium,
-    elevation: Dp = 10.dp,
+    elevation: Dp = 0.dp,
 ) {
     Surface(
         onClick = onShopClick,
         shape = shape,
         elevation = elevation,
+        color = MaterialTheme.colors.background,
         modifier = modifier
             .height(200.dp)
             .width(300.dp)
