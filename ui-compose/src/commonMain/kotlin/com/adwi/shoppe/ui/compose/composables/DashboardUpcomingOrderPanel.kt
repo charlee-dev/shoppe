@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
@@ -25,11 +26,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.SentimentVerySatisfied
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Upcoming
+import androidx.compose.material.icons.outlined.Upcoming
 import androidx.compose.material.icons.twotone.Shop
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -104,30 +107,27 @@ fun DashboardOrderPanelItem(
             .width(orderPanelWight)
     ) {
         Row(
+            verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
                 .fillMaxSize()
         ) {
-            Box(
+            CircleIcon()
+            Column(
+                verticalArrangement = Arrangement.Center,
                 modifier = Modifier
-                    .weight(3f)
-                    .fillMaxHeight()
             ) {
-                Column(
-                    verticalArrangement = Arrangement.SpaceEvenly,
-                    modifier = Modifier.align(Alignment.Center)
-                ) {
-                    Icon(
-                        imageVector = Icons.TwoTone.Shop,
-                        contentDescription = null,
-                        modifier = Modifier.size(50.dp)
-                    )
-                    ShoppeSpacer()
-                    Text(
-                        text = shop.name,
-                        fontWeight = FontWeight.Light
-                    )
-                }
+                Icon(
+                    imageVector = Icons.TwoTone.Shop,
+                    contentDescription = null,
+                    modifier = Modifier.size(50.dp)
+                )
+                ShoppeSpacer()
+                Text(
+                    text = shop.name,
+                    fontWeight = FontWeight.Light
+                )
             }
+
             Surface(
                 color = MaterialTheme.colors.secondary,
                 shape = shape,
@@ -180,5 +180,22 @@ fun DashboardOrderPanelItem(
                 }
             }
         }
+    }
+}
+
+@Composable
+fun CircleIcon(
+    modifier: Modifier = Modifier,
+    shape: Shape = CircleShape,
+    icon: ImageVector = Icons.Outlined.Upcoming,
+) {
+    Surface(
+        shape = shape,
+    ) {
+        Icon(
+            imageVector = icon,
+            contentDescription = null,
+            modifier = modifier.padding(4.dp)
+        )
     }
 }

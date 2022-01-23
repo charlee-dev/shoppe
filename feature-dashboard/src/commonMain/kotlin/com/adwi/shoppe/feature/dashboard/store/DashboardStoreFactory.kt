@@ -83,6 +83,7 @@ internal class DashboardStoreFactory(
                     }
                     simpleOrder
                 }
+
                 val earnings: List<Int>? = simpleOrders?.map {
                     it?.price?.times(it.quantity)?.toInt() ?: 0
                 }

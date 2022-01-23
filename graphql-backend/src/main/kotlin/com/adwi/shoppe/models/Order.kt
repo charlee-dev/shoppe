@@ -7,6 +7,8 @@ data class Order(
     val userId: String,
     val shopId: String,
     val serviceId: String,
+    val serviceName: String,
+    val price: Double,
     var quantity: Double,
     var purchasedAt: String = LocalDateTime.now().toString(),
     var scheduledAt: String,

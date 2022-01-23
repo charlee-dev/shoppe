@@ -29,7 +29,7 @@ fun Application.configureKodein() = di {
     bindSingleton { UserRepository(instance()) }
 
     bindSingleton { AuthService(instance()) }
-    bindSingleton { OrderService(instance()) }
+    bindSingleton { OrderService(instance(), instance()) }
     bindSingleton { ProfileService(instance(), instance()) }
     bindSingleton { ReviewService(instance()) }
     bindSingleton { ServiceService(instance()) }
