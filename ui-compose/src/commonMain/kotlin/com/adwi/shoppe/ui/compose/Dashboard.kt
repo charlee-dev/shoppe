@@ -16,6 +16,7 @@ import com.adwi.shoppe.feature.dashboard.DashboardComponent
 import com.adwi.shoppe.feature.dashboard.DashboardComponent.Model
 import com.adwi.shoppe.ui.compose.composables.DashboardGreeting
 import com.adwi.shoppe.ui.compose.composables.DashboardShopsPanel
+import com.adwi.shoppe.ui.compose.composables.DashboardUpcomingOrderPanel
 import com.adwi.shoppe.ui.compose.resources.Resources
 import com.arkivanov.decompose.extensions.compose.jetbrains.Children
 
@@ -69,6 +70,10 @@ fun DashboardBody(
             DashboardShopsPanel(
                 items = shops,
                 onShopClick = { component.onShopClick(it) }
+            )
+            DashboardUpcomingOrderPanel(
+                items = shops,
+                onOrderClick = { component.onShopClick(it) }
             )
         }
     }

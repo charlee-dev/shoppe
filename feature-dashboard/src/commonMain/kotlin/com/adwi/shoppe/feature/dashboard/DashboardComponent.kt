@@ -34,10 +34,12 @@ interface DashboardComponent {
 
     fun onRefreshItems()
     fun onShopClick(id: String)
+    fun onOrderClick(id: String)
     fun signOut()
 
     sealed class Child() {
         data class Dashboard(val component: DashboardComponent) : Child()
         data class ShopDetails(val component: ShopPreviewComponent) : Child()
+        data class OrderDetails(val component: ShopPreviewComponent) : Child()
     }
 }

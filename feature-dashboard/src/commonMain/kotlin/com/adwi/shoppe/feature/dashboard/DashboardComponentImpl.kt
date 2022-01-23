@@ -43,6 +43,7 @@ class DashboardComponentImpl(
     private val prefsStore by di.instance<PrefsStore>()
 
     val shopPreview = direct.factory<ComponentContext, ShopPreviewComponent>()
+//    val orderPreview = direct.factory<ComponentContext, ShopPreviewComponent>()
 
     private val router = router<Config, Child>(
         initialConfiguration = Config.None,
@@ -52,6 +53,7 @@ class DashboardComponentImpl(
         when (configuration) {
             is Config.None -> Child.Dashboard(this)
             is Config.ShopPreview -> Child.ShopDetails(shopPreview(componentContext))
+            is Config.OrderPreview -> Child.OrderDetails(shopPreview(componentContext))
         }
     }
 
@@ -81,6 +83,10 @@ class DashboardComponentImpl(
         setConfig<Child.ShopDetails>(Config.ShopPreview(id))
     }
 
+    override fun onOrderClick(id: String) {
+        setConfig<Child.OrderDetails>(Config.OrderPreview(id))
+    }
+
     override fun signOut() {
         authRepository.deleteUserState()
         prefsStore.token = ""
@@ -100,8 +106,9 @@ class DashboardComponentImpl(
     private sealed class Config : Parcelable {
         @Parcelize
         object None : Config()
-
         @Parcelize
         data class ShopPreview(val id: String) : Config()
+        @Parcelize
+        data class OrderPreview(val id: String) : Config()
     }
 }
