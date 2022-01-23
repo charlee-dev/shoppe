@@ -13,6 +13,5 @@
 local.properties
 .externalNativeBuild
 .cxx
-/buildSrc/build/
 .env
 *.hprof
