@@ -26,6 +26,14 @@ fun ShopsPagedByUserIdQuery.Result.toShop() = Shop(
     imageUrl = imageUrl
 )
 
+fun GetShopByIdQuery.Review.toReview() = Review(
+    id = id,
+    userId = userId,
+    shopId = shopId,
+    text = text,
+    rating = rating.toLong()
+)
+
 fun ShopsPagedByUserIdQuery.ShopsPagedByUserId.toShops() = Shops(
     results = results.map { it.toShop() },
     info = info

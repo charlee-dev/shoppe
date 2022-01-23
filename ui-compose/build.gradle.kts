@@ -20,7 +20,7 @@ kotlin {
                     implementation(project(manager))
                     implementation(project(planner))
                     implementation(project(settings))
-                    implementation(project(details))
+                    implementation(project(shopPreview))
                 }
 
                 with(compose) {

@@ -9,6 +9,7 @@ import com.adwi.shoppe.data.local.mapper.toShopDetail
 import com.adwi.shoppe.data.local.mapper.toShops
 import com.adwi.shoppe.data.remote.CreateShopMutation
 import com.adwi.shoppe.data.remote.DeleteShopMutation
+import com.adwi.shoppe.data.remote.GetProfileQuery
 import com.adwi.shoppe.data.remote.GetShopByIdQuery
 import com.adwi.shoppe.data.remote.ShopsPagedByUserIdQuery
 import com.adwi.shoppe.data.remote.UpdateShopMutation
@@ -17,7 +18,12 @@ import com.apollographql.apollo3.api.Optional
 
 class ShopRepository(apolloProvider: ApolloProvider) : BaseRepository(apolloProvider) {
 
-    suspend fun getShops(page: Optional<Int>, size: Optional<Int>): Shops? {
+    suspend fun getProfileShops(): List<Shop> {
+        val response = apolloClient.query(GetProfileQuery()).execute()
+        return response.data?.getProfile?.shops?.map { it.toShop() } ?: emptyList()
+    }
+
+    suspend fun getShopsPaged(page: Optional<Int>, size: Optional<Int>): Shops? {
         val response = apolloClient.query(ShopsPagedByUserIdQuery(page, size)).execute()
         return response.data?.shopsPagedByUserId?.toShops()
     }

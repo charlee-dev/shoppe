@@ -88,22 +88,7 @@ fun WindowSizedContainer(
     when (windowSize) {
         WindowSize.Compact -> Box(modifier = Modifier
             .fillMaxSize()
-            .padding(24.dp)
         ) {
-            content()
-            ShoppeBottomNav(
-                items = navItems,
-                currentIndex = currentIndex,
-                onIndexSelected = onIndexSelected,
-                paddingValues = PaddingValues(),
-                modifier = Modifier.align(Alignment.BottomCenter)
-            )
-        }
-        WindowSize.Medium -> Box(modifier = Modifier
-            .fillMaxSize()
-            .padding(24.dp)
-        ) {
-            content()
             ShoppeBottomNav(
                 items = navItems,
                 currentIndex = currentIndex,
@@ -111,6 +96,19 @@ fun WindowSizedContainer(
                 paddingValues = PaddingValues(bottom = 16.dp, start = 16.dp, end = 16.dp),
                 modifier = Modifier.align(Alignment.BottomCenter)
             )
+            content()
+        }
+        WindowSize.Medium -> Box(modifier = Modifier
+            .fillMaxSize()
+        ) {
+            ShoppeBottomNav(
+                items = navItems,
+                currentIndex = currentIndex,
+                onIndexSelected = onIndexSelected,
+                paddingValues = PaddingValues(start = 16.dp, end = 16.dp),
+                modifier = Modifier.align(Alignment.BottomCenter)
+            )
+            content()
         }
         WindowSize.Expanded -> Row(
             modifier = Modifier.fillMaxSize()
@@ -135,21 +133,20 @@ fun WindowSizedContainer(
     }
 }
 
+@ExperimentalMaterialApi
 @Composable
 private fun LibraryBody(
     component: NavigationComponent,
     paddingValues: PaddingValues,
 ) {
-//    Box(modifier = Modifier.padding(paddingValues = paddingValues)) {
-        Children(component.routerState) {
-            it.instance.let { child ->
-                when (child) {
-                    is Child.Dashboard -> DashboardContent(child.component)
-                    is Child.Manager -> ManagerContent(child.component)
-                    is Child.Planner -> PlannerContent(child.component)
-                    is Child.Settings -> SettingsContent(child.component)
-                }
+    Children(component.routerState) {
+        it.instance.let { child ->
+            when (child) {
+                is Child.Dashboard -> DashboardContent(child.component)
+                is Child.Manager -> ManagerContent(child.component)
+                is Child.Planner -> PlannerContent(child.component)
+                is Child.Settings -> SettingsContent(child.component)
             }
-//        }
+        }
     }
 }

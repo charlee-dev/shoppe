@@ -6,12 +6,12 @@ import com.arkivanov.decompose.value.Value
 import org.kodein.di.DI
 import org.kodein.di.DIAware
 
-class DetailsComponentImpl(
+class ShopPreviewComponentImpl(
     override val di: DI,
     private val componentContext: ComponentContext,
-) : DetailsComponent, DIAware, ComponentContext by componentContext {
+) : ShopPreviewComponent, DIAware, ComponentContext by componentContext {
 
-    override val routerState: Value<RouterState<*, DetailsComponent.Child>>
+    override val routerState: Value<RouterState<*, ShopPreviewComponent.Child>>
         get() = TODO("Not yet implemented")
 
     override fun onData() {

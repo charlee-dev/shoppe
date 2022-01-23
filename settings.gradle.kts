@@ -15,7 +15,7 @@ include(
     ":feature-manager",
     ":feature-planner",
     ":feature-settings",
-    ":feature-details",
+    ":feature-shopPreview",
 
     ":data-sdk",
     ":data-datasource",

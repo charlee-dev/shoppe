@@ -31,7 +31,7 @@ object Module {
         const val manager = ":feature-manager"
         const val planner = ":feature-planner"
         const val settings = ":feature-settings"
-        const val details = ":feature-details"
+        const val shopPreview = ":feature-shopPreview"
         const val user = ":feature-user"
 
         const val top = ":feature-top"

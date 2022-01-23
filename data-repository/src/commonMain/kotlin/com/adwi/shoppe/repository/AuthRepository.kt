@@ -1,10 +1,7 @@
 package com.adwi.shoppe.repository
 
-import com.adwi.kotlin.data.local.Shop
 import com.adwi.kotlin.data.local.UserState
 import com.adwi.shoppe.data.api.ApolloProvider
-import com.adwi.shoppe.data.local.mapper.toShop
-import com.adwi.shoppe.data.remote.GetProfileQuery
 import com.adwi.shoppe.data.remote.SignInMutation
 import com.adwi.shoppe.data.remote.SignUpMutation
 import com.adwi.shoppe.data.remote.type.UserInput
@@ -36,11 +33,6 @@ class AuthRepository(apolloProvider: ApolloProvider) : BaseRepository(apolloProv
             return data.token
         }
         throw Exception("Could not sign up")
-    }
-
-    suspend fun getProfileShops(): List<Shop> {
-        val response = apolloClient.query(GetProfileQuery()).execute()
-        return response.data?.getProfile?.shops?.map { it.toShop() } ?: emptyList()
     }
 
     fun getUserState(): UserState? = database.getUserState()

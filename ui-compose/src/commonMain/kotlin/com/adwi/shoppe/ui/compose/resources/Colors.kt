@@ -23,4 +23,5 @@ object Colors {
     val Secondary = Color(231, 189, 211, 110)
     val SecondaryVariant = Color(255, 223, 247)
     val SecondaryLight = Color(250, 241, 246)
+    val Gold = Color(250, 184, 93)
 }
