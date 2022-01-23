@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="feature-appbar-desktop">
+    <output-path>$PROJECT_DIR$/feature-appbar/build/libs</output-path>
+    <root id="archive" name="feature-appbar-desktop.jar" />
+  </artifact>
+</component>

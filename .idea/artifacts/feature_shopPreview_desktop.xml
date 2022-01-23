@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="feature-shopPreview-desktop">
+    <output-path>$PROJECT_DIR$/feature-shopPreview/build/libs</output-path>
+    <root id="archive" name="feature-shopPreview-desktop.jar">
+      <element id="module-output" name="shoppe.feature-shopPreview.desktopMain" />
+    </root>
+  </artifact>
+</component>

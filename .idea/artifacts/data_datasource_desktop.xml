@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="data-datasource-desktop">
+    <output-path>$PROJECT_DIR$/data-datasource/build/libs</output-path>
+    <root id="archive" name="data-datasource-desktop.jar">
+      <element id="module-output" name="shoppe.data-datasource.desktopMain" />
+    </root>
+  </artifact>
+</component>

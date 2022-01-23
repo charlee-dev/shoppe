@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="feature-details-desktop">
+    <output-path>$PROJECT_DIR$/feature-details/build/libs</output-path>
+    <root id="archive" name="feature-details-desktop.jar">
+      <element id="module-output" name="shoppe.feature-details.desktopMain" />
+    </root>
+  </artifact>
+</component>

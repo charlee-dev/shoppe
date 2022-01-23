@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="data-repository-desktop">
+    <output-path>$PROJECT_DIR$/data-repository/build/libs</output-path>
+    <root id="archive" name="data-repository-desktop.jar">
+      <element id="module-output" name="shoppe.data-repository.desktopMain" />
+    </root>
+  </artifact>
+</component>
