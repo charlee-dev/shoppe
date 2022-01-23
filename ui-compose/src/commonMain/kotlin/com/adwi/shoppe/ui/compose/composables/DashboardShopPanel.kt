@@ -1,6 +1,5 @@
 package com.adwi.shoppe.ui.compose.composables
 
-import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -40,6 +39,9 @@ import androidx.compose.ui.unit.dp
 import com.adwi.shoppe.feature.dashboard.DashboardComponent
 import com.adwi.shoppe.ui.compose.resources.Resources
 
+private val panelHeight = 200.dp
+private val panelWidth = 300.dp
+
 @ExperimentalMaterialApi
 @Composable
 fun DashboardShopsPanel(
@@ -61,8 +63,19 @@ fun DashboardShopsPanel(
             modifier = modifier
         ) {
             item {
-                AnimatedVisibility(visible = items.isEmpty()) {
-                    CircularProgressIndicator(color = MaterialTheme.colors.primary)
+                if (items.isEmpty()) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(panelHeight)
+                    ) {
+                        CircularProgressIndicator(
+                            color = MaterialTheme.colors.primary,
+                            modifier = Modifier
+                                .align(Alignment.Center)
+                                .padding(32.dp)
+                        )
+                    }
                 }
             }
             items(items = items) { item ->
@@ -90,8 +103,8 @@ fun DashboardShopPanelItem(
         elevation = elevation,
         color = MaterialTheme.colors.background,
         modifier = modifier
-            .height(200.dp)
-            .width(300.dp)
+            .height(panelHeight)
+            .width(panelWidth)
     ) {
         Row(
             modifier = Modifier

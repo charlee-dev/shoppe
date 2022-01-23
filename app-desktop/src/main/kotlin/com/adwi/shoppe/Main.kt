@@ -2,6 +2,7 @@ package com.adwi.shoppe
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
@@ -27,6 +28,7 @@ import org.kodein.di.factory
 @ExperimentalSettingsApi
 @ExperimentalAnimationApi
 @ExperimentalMaterialApi
+@ExperimentalComposeUiApi
 fun main() = application {
 
     val di = DI { import(rootComponentModule) }
