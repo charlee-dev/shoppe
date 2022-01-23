@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: shoppy-kmm
+    environment: shoppy
 
     steps:
       - uses: actions/checkout@v2
