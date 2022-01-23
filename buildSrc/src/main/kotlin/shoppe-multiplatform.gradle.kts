@@ -30,6 +30,6 @@ kotlin {
     }
 
     tasks.withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = "1.8"
+        kotlinOptions.jvmTarget = App.Version.java_version
     }
 }
