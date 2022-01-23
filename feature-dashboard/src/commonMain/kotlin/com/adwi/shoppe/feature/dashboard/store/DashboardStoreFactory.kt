@@ -1,10 +1,12 @@
 package com.adwi.shoppe.feature.dashboard.store
 
 import co.touchlab.kermit.Logger
+import com.adwi.shoppe.data.local.mapper.ShopDetail
 import com.adwi.shoppe.feature.dashboard.DashboardComponent
 import com.adwi.shoppe.feature.dashboard.store.DashboardStore.Intent
 import com.adwi.shoppe.feature.dashboard.store.DashboardStore.Result
 import com.adwi.shoppe.feature.dashboard.store.DashboardStore.State
+import com.adwi.shoppe.repository.ServiceRepository
 import com.adwi.shoppe.repository.ShopRepository
 import com.adwi.shoppe.utils.AppCoroutineDispatcher
 import com.apollographql.apollo3.annotations.ApolloExperimental
@@ -26,6 +28,7 @@ import kotlinx.coroutines.withContext
 internal class DashboardStoreFactory(
     private val storeFactory: StoreFactory,
     private val shopRepository: ShopRepository,
+    private val serviceRepository: ServiceRepository,
     private val onShopClick: (String) -> Unit,
 ) {
     fun create(): DashboardStore = object : DashboardStore, Store<Intent, State, Nothing> by storeFactory.create(
@@ -66,11 +69,27 @@ internal class DashboardStoreFactory(
         private suspend fun getShopItems(): Flow<List<DashboardComponent.ShopItem>> = flowOf(
             shopRepository.getProfileShops().map { shop ->
                 Logger.v("getShopItems - shop = ${shop.name}")
-                val shopDetail = shopRepository.getShop(shop.id)
+                val shopDetail: ShopDetail? = shopRepository.getShop(shop.id)
+
+                data class SimpleOrder(val price: Double, val quantity: Double)
+
+                val simpleOrders = shopDetail?.orders?.map { order ->
+                    val service = serviceRepository.getService(order.serviceId)
+                    val simpleOrder = service?.let {
+                        SimpleOrder(
+                            price = it.price,
+                            quantity = order.quantity
+                        )
+                    }
+                    simpleOrder
+                }
+                val earnings: List<Int>? = simpleOrders?.map {
+                    it?.price?.times(it.quantity)?.toInt() ?: 0
+                }
 
                 val averageRating = shopDetail?.reviews?.sumOf { review ->
                     review.rating
-                }?.div(shopDetail.reviews.size)?.toInt()
+                }?.div(shopDetail.reviews.size)?.toDouble()
 
                 val totalOrders = shopDetail?.orders?.size ?: 0
 
@@ -81,9 +100,13 @@ internal class DashboardStoreFactory(
                 DashboardComponent.ShopItem(
                     id = shop.id,
                     name = shop.name,
-                    rating = averageRating ?: 0,
+                    rating = averageRating ?: 0.0,
+                    earnings = earnings?.sum() ?: 0,
                     totalOrders = totalOrders,
-                    upcomingOrders = upcomingOrders?.size ?: 0
+                    upcomingOrders = upcomingOrders?.size ?: 0,
+                    reviews = shopDetail?.reviews ?: emptyList(),
+                    orders = shopDetail?.orders ?: emptyList(),
+                    services = shopDetail?.services ?: emptyList()
                 )
             }
         )

@@ -1,5 +1,8 @@
 package com.adwi.shoppe.feature.dashboard
 
+import com.adwi.kotlin.data.local.Review
+import com.adwi.kotlin.data.local.Service
+import com.adwi.kotlin.data.local.ShopOrder
 import com.adwi.shoppe.feature.details.ShopPreviewComponent
 import com.arkivanov.decompose.router.RouterState
 import com.arkivanov.decompose.value.Value
@@ -11,9 +14,13 @@ interface DashboardComponent {
     data class ShopItem(
         val id: String,
         val name: String,
-        val rating: Int,
+        val rating: Double,
+        val earnings: Int,
         val totalOrders: Int,
         val upcomingOrders: Int,
+        val reviews: List<Review>,
+        val orders: List<ShopOrder>,
+        val services: List<Service>,
     )
 
     data class Model(

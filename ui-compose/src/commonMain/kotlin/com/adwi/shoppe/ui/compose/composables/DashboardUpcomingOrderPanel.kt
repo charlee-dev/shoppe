@@ -22,7 +22,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AttachMoney
 import androidx.compose.material.icons.filled.SentimentVerySatisfied
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Upcoming
@@ -30,25 +29,22 @@ import androidx.compose.material.icons.twotone.Shop
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.adwi.shoppe.feature.dashboard.DashboardComponent.ShopItem
 import com.adwi.shoppe.ui.compose.resources.Resources
 
-private val shopPanelHeight = 200.dp
-private val shopPanelWidth = 300.dp
+private val orderPanelHeight = 100.dp
+private val orderPanelWight = 200.dp
 
 @ExperimentalMaterialApi
 @Composable
-fun DashboardShopsPanel(
+fun DashboardUpcomingOrderPanel(
     modifier: Modifier = Modifier,
     items: List<ShopItem>,
-    onShopClick: (String) -> Unit,
+    onOrderClick: (String) -> Unit,
 ) {
     Column(
         modifier = Modifier.fillMaxWidth()
@@ -68,7 +64,7 @@ fun DashboardShopsPanel(
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(shopPanelHeight)
+                            .height(orderPanelHeight)
                     ) {
                         CircularProgressIndicator(
                             color = MaterialTheme.colors.primary,
@@ -80,9 +76,9 @@ fun DashboardShopsPanel(
                 }
             }
             items(items = items) { item ->
-                DashboardShopPanelItem(
+                DashboardOrderPanelItem(
                     shop = item,
-                    onShopClick = { onShopClick(item.id) }
+                    onShopClick = { onOrderClick(item.id) }
                 )
             }
         }
@@ -91,7 +87,7 @@ fun DashboardShopsPanel(
 
 @ExperimentalMaterialApi
 @Composable
-fun DashboardShopPanelItem(
+fun DashboardOrderPanelItem(
     modifier: Modifier = Modifier,
     shop: ShopItem,
     onShopClick: () -> Unit,
@@ -104,8 +100,8 @@ fun DashboardShopPanelItem(
         elevation = elevation,
         color = MaterialTheme.colors.background,
         modifier = modifier
-            .height(shopPanelHeight)
-            .width(shopPanelWidth)
+            .height(orderPanelHeight)
+            .width(orderPanelWight)
     ) {
         Row(
             modifier = Modifier
@@ -129,14 +125,6 @@ fun DashboardShopPanelItem(
                     Text(
                         text = shop.name,
                         fontWeight = FontWeight.Light
-                    )
-                    ShoppeSpacer()
-                    DashboardPanelOrderMessageWithIcon(
-                        icon = Icons.Default.AttachMoney,
-                        iconColor = MaterialTheme.colors.primary,
-                        value = shop.earnings.toString(),
-                        valueColor = MaterialTheme.colors.onBackground,
-                        modifier = Modifier
                     )
                 }
             }
@@ -192,34 +180,5 @@ fun DashboardShopPanelItem(
                 }
             }
         }
-    }
-}
-
-@Composable
-fun DashboardPanelOrderMessageWithIcon(
-    modifier: Modifier = Modifier,
-    icon: ImageVector,
-    value: String,
-    iconColor: Color,
-    valueColor: Color = MaterialTheme.colors.onSurface,
-) {
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier
-    ) {
-        Icon(
-            imageVector = icon,
-            contentDescription = "",
-            tint = iconColor,
-            modifier = Modifier
-        )
-        ShoppeSpacer(16)
-        Text(
-            text = value.toString(),
-            color = valueColor,
-            textAlign = TextAlign.Center,
-            fontWeight = FontWeight.Light,
-            modifier = Modifier
-        )
     }
 }

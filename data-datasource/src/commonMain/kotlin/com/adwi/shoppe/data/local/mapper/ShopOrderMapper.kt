@@ -7,7 +7,6 @@ import com.adwi.shoppe.data.remote.GetShopByIdQuery
 import com.adwi.shoppe.data.remote.OrdersPagedByShopIdQuery
 import com.adwi.shoppe.data.remote.UpdateOrderMutation
 
-
 fun GetOrderQuery.GetOrder.toShopOrder() = ShopOrder(
     id = id,
     userId = userId,

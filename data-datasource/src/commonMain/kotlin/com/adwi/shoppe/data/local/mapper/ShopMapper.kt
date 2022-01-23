@@ -13,9 +13,9 @@ import com.adwi.shoppe.data.remote.UpdateShopMutation
 data class Shops(val results: List<Shop>, val info: ShopsPagedByUserIdQuery.Info?)
 data class ShopDetail(
     val shop: Shop,
-    val services: List<Service>,
-    val reviews: List<Review>,
-    val orders: List<ShopOrder>,
+    val services: List<Service> = listOf(),
+    val reviews: List<Review> = listOf(),
+    val orders: List<ShopOrder> = listOf(),
 )
 
 fun ShopsPagedByUserIdQuery.Result.toShop() = Shop(

@@ -59,6 +59,7 @@ class DashboardComponentImpl(
         DashboardStoreFactory(
             storeFactory = direct.instance(),
             shopRepository = direct.instance(),
+            serviceRepository = direct.instance(),
             onShopClick = { onShopClick(it) }
         ).create()
     }
