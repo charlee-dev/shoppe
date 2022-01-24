@@ -13,11 +13,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment=" updated schema">
+    <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment=" updated mongo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/di/MainModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/di/MainModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/repository/UserRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/repository/UserRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/util/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/util/Constants.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +59,24 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="shoppe" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shoppe" type="f1a62948:ProjectNode" />
+                <item name="graphql-backend" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shoppe" type="f1a62948:ProjectNode" />
+                <item name="graphql-backend" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shoppe" type="f1a62948:ProjectNode" />
+                <item name="graphql-backend" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="shadow" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -124,7 +139,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -151,7 +166,7 @@
       <recent name="com.adwi.shoppe.feature.details" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.shoppe:data-datasource [downloadApolloSchema]">
+  <component name="RunManager" selected="Kotlin.Run server">
     <configuration name="Android" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="shoppe.app-android" />
       <option name="DEPLOY" value="true" />
@@ -336,9 +351,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.shoppe:graphql-backend [shadowJar]" />
         <item itemvalue="Gradle.shoppe [downloadSchema]" />
         <item itemvalue="Gradle.shoppe:data-datasource [downloadApolloSchema]" />
-        <item itemvalue="Gradle.shoppe:graphql-backend [shadowJar]" />
         <item itemvalue="Gradle.shoppe [assemble]" />
         <item itemvalue="Gradle.shoppe [init]" />
       </list>
@@ -579,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643046366810</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary=" updated mongo">
+      <created>1643048612245</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1643048612245</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,7 +632,8 @@
     <MESSAGE value="added" />
     <MESSAGE value="updated" />
     <MESSAGE value=" updated schema" />
-    <option name="LAST_COMMIT_MESSAGE" value=" updated schema" />
+    <MESSAGE value=" updated mongo" />
+    <option name="LAST_COMMIT_MESSAGE" value=" updated mongo" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
