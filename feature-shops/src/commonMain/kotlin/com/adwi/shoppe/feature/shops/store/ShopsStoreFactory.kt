@@ -1,16 +1,15 @@
-package com.adwi.shoppe.feature.dashboard.store
+package com.adwi.shoppe.feature.shops.store
 
 import co.touchlab.kermit.Logger
 import com.adwi.shoppe.data.local.mapper.ShopDetail
-import com.adwi.shoppe.feature.dashboard.DashboardComponent
-import com.adwi.shoppe.feature.dashboard.store.DashboardStore.Intent
-import com.adwi.shoppe.feature.dashboard.store.DashboardStore.Result
-import com.adwi.shoppe.feature.dashboard.store.DashboardStore.State
+import com.adwi.shoppe.feature.shops.ShopsComponent.ShopItem
+import com.adwi.shoppe.feature.shops.store.ShopsStore.Intent
+import com.adwi.shoppe.feature.shops.store.ShopsStore.Result
+import com.adwi.shoppe.feature.shops.store.ShopsStore.State
 import com.adwi.shoppe.repository.ServiceRepository
 import com.adwi.shoppe.repository.ShopRepository
 import com.adwi.shoppe.utils.AppCoroutineDispatcher
 import com.apollographql.apollo3.annotations.ApolloExperimental
-import com.apollographql.apollo3.mpp.currentTimeMillis
 import com.arkivanov.mvikotlin.core.store.Reducer
 import com.arkivanov.mvikotlin.core.store.SimpleBootstrapper
 import com.arkivanov.mvikotlin.core.store.Store
@@ -25,14 +24,14 @@ import kotlinx.coroutines.withContext
 
 @ApolloExperimental
 @ExperimentalCoroutinesApi
-internal class DashboardStoreFactory(
+internal class ShopsStoreFactory(
     private val storeFactory: StoreFactory,
     private val shopRepository: ShopRepository,
     private val serviceRepository: ServiceRepository,
     private val onShopClick: (String) -> Unit,
 ) {
-    fun create(): DashboardStore = object : DashboardStore, Store<Intent, State, Nothing> by storeFactory.create(
-        name = "${DashboardStore::class.simpleName}",
+    fun create(): ShopsStore = object : ShopsStore, Store<Intent, State, Nothing> by storeFactory.create(
+        name = "${ShopsStore::class.simpleName}",
         initialState = State(),
         bootstrapper = SimpleBootstrapper(Unit),
         executorFactory = ::ExecutorImpl,
@@ -66,7 +65,7 @@ internal class DashboardStoreFactory(
             }
         }
 
-        private suspend fun getShopItems(): Flow<List<DashboardComponent.ShopItem>> = flowOf(
+        private suspend fun getShopItems(): Flow<List<ShopItem>> = flowOf(
             shopRepository.getProfileShops().map { shop ->
                 Logger.v("getShopItems - shop = ${shop.name}")
                 val shopDetail: ShopDetail? = shopRepository.getShop(shop.id)
@@ -75,6 +74,7 @@ internal class DashboardStoreFactory(
 
                 val simpleOrders = shopDetail?.orders?.map { order ->
                     val service = serviceRepository.getService(order.serviceId)
+
                     val simpleOrder = service?.let {
                         SimpleOrder(
                             price = it.price,
@@ -88,27 +88,15 @@ internal class DashboardStoreFactory(
                     it?.price?.times(it.quantity)?.toInt() ?: 0
                 }
 
-                val averageRating = shopDetail?.reviews?.sumOf { review ->
-                    review.rating
-                }?.div(shopDetail.reviews.size)?.toDouble()
-
-                val totalOrders = shopDetail?.orders?.size ?: 0
-
-                val upcomingOrders = shopDetail?.orders?.filter { order ->
-                    order.scheduledAt > currentTimeMillis()
-                }
-
-                DashboardComponent.ShopItem(
+                val item = ShopItem(
                     id = shop.id,
                     name = shop.name,
-                    rating = averageRating ?: 0.0,
                     earnings = earnings?.sum() ?: 0,
-                    totalOrders = totalOrders,
-                    upcomingOrders = upcomingOrders?.size ?: 0,
                     reviews = shopDetail?.reviews ?: emptyList(),
                     orders = shopDetail?.orders ?: emptyList(),
                     services = shopDetail?.services ?: emptyList()
                 )
+                item
             }
         )
 

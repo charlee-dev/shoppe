@@ -36,7 +36,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.adwi.shoppe.feature.dashboard.DashboardComponent.ShopItem
+import com.adwi.shoppe.feature.shops.ShopsComponent.ShopItem
 import com.adwi.shoppe.ui.compose.resources.Resources
 
 private val orderPanelHeight = 100.dp
@@ -155,14 +155,14 @@ fun DashboardOrderPanelItem(
                                 DashboardPanelOrderMessageWithIcon(
                                     icon = Icons.Default.SentimentVerySatisfied,
                                     iconColor = MaterialTheme.colors.onPrimary,
-                                    value = shop.totalOrders.toString(),
+                                    value = shop.totalOrders().toString(),
                                     valueColor = MaterialTheme.colors.onPrimary,
                                     modifier = Modifier
                                 )
                                 DashboardPanelOrderMessageWithIcon(
                                     icon = Icons.Default.Upcoming,
                                     iconColor = MaterialTheme.colors.onPrimary,
-                                    value = shop.upcomingOrders.toString(),
+                                    value = shop.upcomingOrders().toString(),
                                     valueColor = MaterialTheme.colors.onPrimary,
                                     modifier = Modifier
                                 )
@@ -173,7 +173,7 @@ fun DashboardOrderPanelItem(
                     DashboardPanelOrderMessageWithIcon(
                         icon = Icons.Default.Star,
                         iconColor = Resources.colors.Gold,
-                        value = shop.rating.toString(),
+                        value = shop.averageRating().toString(),
                         modifier = Modifier.weight(1f)
                     )
                     Spacer(Modifier.weight(1f))

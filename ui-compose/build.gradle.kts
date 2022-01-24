@@ -17,6 +17,7 @@ kotlin {
                     implementation(project(auth))
                     implementation(project(navigation))
                     implementation(project(dashboard))
+                    implementation(project(shops))
                     implementation(project(manager))
                     implementation(project(planner))
                     implementation(project(settings))

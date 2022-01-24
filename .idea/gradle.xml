@@ -26,6 +26,7 @@
             <option value="$PROJECT_DIR$/feature-root" />
             <option value="$PROJECT_DIR$/feature-settings" />
             <option value="$PROJECT_DIR$/feature-shopPreview" />
+            <option value="$PROJECT_DIR$/feature-shops" />
             <option value="$PROJECT_DIR$/feature-splash" />
             <option value="$PROJECT_DIR$/graphql-backend" />
             <option value="$PROJECT_DIR$/ui-compose" />

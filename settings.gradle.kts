@@ -12,6 +12,7 @@ include(
     ":feature-auth",
     ":feature-navigation",
     ":feature-dashboard",
+    ":feature-shops",
     ":feature-manager",
     ":feature-planner",
     ":feature-settings",

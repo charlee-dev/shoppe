@@ -7,8 +7,10 @@ import com.adwi.shoppe.plugins.configureRouting
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
+val port = System.getenv("PORT")?.toInt() ?: 8080
+
 fun main() {
-    embeddedServer(Netty, 8080) {
+    embeddedServer(Netty, port) {
         configureKodein()
         configureGraphQL()
         configureContentNegotiations()
