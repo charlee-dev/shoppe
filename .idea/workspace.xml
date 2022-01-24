@@ -13,35 +13,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment=" updated mongo">
-      <change afterPath="$PROJECT_DIR$/feature-shops/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-shops/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-shops/src/androidMain/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/Module.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/ShopsComponent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/ShopsComponentImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/store/ShopsStore.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/store/ShopsStoreFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment=" updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/buildSrc/src/main/kotlin/Dependencies.kt" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/buildSrc/src/main/kotlin/Dependencies.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-dashboard/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponentImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponentImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/Module.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/Module.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/store/DashboardStore.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/store/DashboardStoreFactory.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-compose/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Dashboard.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Dashboard.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/DashboardShopPanel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/DashboardShopPanel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/DashboardUpcomingOrderPanel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/DashboardUpcomingOrderPanel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/ShopsComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/ShopsComponent.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/adrianwitaszak/.android/avd/Pixel_5_API_31.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -169,7 +150,7 @@
       <recent name="com.adwi.shoppe.feature.details" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Run server">
+  <component name="RunManager" selected="Android App.Android">
     <configuration name="Android" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="shoppe.app-android" />
       <option name="DEPLOY" value="true" />
@@ -618,7 +599,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643050630336</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary=" updated">
+      <created>1643056496682</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1643056496682</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -650,7 +638,8 @@
     <MESSAGE value="updated" />
     <MESSAGE value=" updated schema" />
     <MESSAGE value=" updated mongo" />
-    <option name="LAST_COMMIT_MESSAGE" value=" updated mongo" />
+    <MESSAGE value=" updated" />
+    <option name="LAST_COMMIT_MESSAGE" value=" updated" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

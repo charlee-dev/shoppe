@@ -21,7 +21,9 @@ interface ShopsComponent {
 
         fun upcomingOrders(): Int = orders.filter { it.scheduledAt > currentTimeMillis() }.size
 
-        fun averageRating() = reviews.sumOf { it.rating }.div(reviews.size).toDouble()
+        fun averageRating() = if (reviews.isNotEmpty()) {
+            reviews.sumOf { it.rating }.div(reviews.size).toDouble()
+        } else 1.0
     }
 
     data class Model(
