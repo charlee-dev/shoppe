@@ -1,6 +1,5 @@
 package com.adwi.shoppe.di
 
-import com.adwi.shoppe.mongoKey
 import com.adwi.shoppe.repository.OrderRepository
 import com.adwi.shoppe.repository.ReviewRepository
 import com.adwi.shoppe.repository.ServiceRepository
@@ -17,6 +16,9 @@ import org.kodein.di.bindSingleton
 import org.kodein.di.instance
 import org.kodein.di.ktor.di
 import org.litote.kmongo.KMongo
+
+val mongoKey = System.getenv("MONGO_URI") ?: ""
+//    "mongodb+srv://shoppe:1n1ezm1en1as1en1c@shoppe.9q104.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 fun Application.configureKodein() = di {
 

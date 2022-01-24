@@ -14,32 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment=" updated schema">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/buildSrc/src/main/kotlin/Dependencies.kt" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/buildSrc/src/main/kotlin/Dependencies.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/shoppe-multiplatform.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/shoppe-multiplatform.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/androidMain/kotlin/com/adwi/shoppe/data/local/DatabaseDriverFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/androidMain/kotlin/com/adwi/shoppe/data/local/DatabaseDriverFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data/schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/api/ApolloProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/api/ApolloProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/Database.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/Database.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ReviewMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ReviewMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ServiceMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ServiceMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopOrderMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopOrderMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/desktopMain/kotlin/com/adwi/shoppe/data/local/DatabaseDriverFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/desktopMain/kotlin/com/adwi/shoppe/data/local/DatabaseDriverFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/AuthRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/AuthRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ReviewRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ReviewRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ServiceRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ServiceRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ShopOrderRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ShopOrderRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ShopRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ShopRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-auth/src/commonMain/kotlin/com/adwi/shoppe/feature/auth/store/AuthStoreFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-auth/src/commonMain/kotlin/com/adwi/shoppe/feature/auth/store/AuthStoreFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Auth.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Auth.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -588,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642962964309</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary=" updated schema">
+      <created>1643044933176</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1643044933176</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
