@@ -20,9 +20,7 @@ class UserRepository(client: MongoClient) : RepositoryInterface<User> {
 
     fun getUserByEmail(email: String? = null): User? {
         return try {
-            col.findOne(
-                User::email eq email,
-            )
+            col.findOne(User::email eq email)
         } catch (t: Throwable) {
             throw Exception("Cannot get user with that email")
         }

@@ -15,13 +15,15 @@
   <component name="ChangeListManager">
     <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment=" updated schema">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/di/MainModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/di/MainModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/repository/UserRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/repository/UserRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/util/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/util/Constants.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/adrianwitaszak/.android/avd/Pixel_5_API_31.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -149,7 +151,7 @@
       <recent name="com.adwi.shoppe.feature.details" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.Android">
+  <component name="RunManager" selected="Gradle.shoppe:data-datasource [downloadApolloSchema]">
     <configuration name="Android" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="shoppe.app-android" />
       <option name="DEPLOY" value="true" />
@@ -253,7 +255,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/data-datasource" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -329,8 +331,8 @@
       <item itemvalue="Gradle.shoppe [init]" />
       <item itemvalue="Gradle.shoppe [assemble]" />
       <item itemvalue="Gradle.shoppe:graphql-backend [shadowJar]" />
-      <item itemvalue="Kotlin.Run server" />
       <item itemvalue="Gradle.shoppe [downloadSchema]" />
+      <item itemvalue="Kotlin.Run server" />
     </list>
     <recent_temporary>
       <list>
@@ -570,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643044933176</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary=" updated schema">
+      <created>1643046366810</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1643046366810</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
