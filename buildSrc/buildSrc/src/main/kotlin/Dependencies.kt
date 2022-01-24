@@ -5,7 +5,6 @@ object App {
     object Version {
         const val code = 1
         const val name = "1.0"
-        const val java_version = "11"
     }
 }
 

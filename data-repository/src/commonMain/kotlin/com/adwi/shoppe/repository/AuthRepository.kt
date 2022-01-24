@@ -1,10 +1,10 @@
 package com.adwi.shoppe.repository
 
 import com.adwi.kotlin.data.local.UserState
+import com.adwi.shoppe.SignInMutation
+import com.adwi.shoppe.SignUpMutation
 import com.adwi.shoppe.data.api.ApolloProvider
-import com.adwi.shoppe.data.remote.SignInMutation
-import com.adwi.shoppe.data.remote.SignUpMutation
-import com.adwi.shoppe.data.remote.type.UserInput
+import com.adwi.shoppe.type.UserInput
 import com.apollographql.apollo3.annotations.ApolloExperimental
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 

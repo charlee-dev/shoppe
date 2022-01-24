@@ -1,11 +1,11 @@
 package com.adwi.shoppe.data.local.mapper
 
 import com.adwi.kotlin.data.local.ShopOrder
-import com.adwi.shoppe.data.remote.CreateOrderMutation
-import com.adwi.shoppe.data.remote.GetOrderQuery
-import com.adwi.shoppe.data.remote.GetShopByIdQuery
-import com.adwi.shoppe.data.remote.OrdersPagedByShopIdQuery
-import com.adwi.shoppe.data.remote.UpdateOrderMutation
+import com.adwi.shoppe.CreateOrderMutation
+import com.adwi.shoppe.GetOrderQuery
+import com.adwi.shoppe.GetShopByIdQuery
+import com.adwi.shoppe.OrdersPagedByShopIdQuery
+import com.adwi.shoppe.UpdateOrderMutation
 
 fun GetOrderQuery.GetOrder.toShopOrder() = ShopOrder(
     id = id,

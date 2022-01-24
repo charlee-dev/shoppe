@@ -581,6 +581,18 @@
             "args": []
           },
           {
+            "name": "price",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float"
+              }
+            },
+            "args": []
+          },
+          {
             "name": "purchasedAt",
             "isDeprecated": false,
             "type": {
@@ -618,6 +630,18 @@
           },
           {
             "name": "serviceId",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "serviceName",
             "isDeprecated": false,
             "type": {
               "kind": "NON_NULL",
@@ -1009,6 +1033,43 @@
       },
       {
         "kind": "OBJECT",
+        "name": "OrderPage",
+        "description": "",
+        "fields": [
+          {
+            "name": "info",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PagingInfo"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "results",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "Order"
+                  }
+                }
+              }
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
         "name": "ReviewPage",
         "description": "",
         "fields": [
@@ -1075,43 +1136,6 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "User"
-              }
-            },
-            "args": []
-          }
-        ]
-      },
-      {
-        "kind": "OBJECT",
-        "name": "OrderPage",
-        "description": "",
-        "fields": [
-          {
-            "name": "info",
-            "isDeprecated": false,
-            "type": {
-              "kind": "NON_NULL",
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "PagingInfo"
-              }
-            },
-            "args": []
-          },
-          {
-            "name": "results",
-            "isDeprecated": false,
-            "type": {
-              "kind": "NON_NULL",
-              "ofType": {
-                "kind": "LIST",
-                "ofType": {
-                  "kind": "NON_NULL",
-                  "ofType": {
-                    "kind": "OBJECT",
-                    "name": "Order"
-                  }
-                }
               }
             },
             "args": []
@@ -1228,35 +1252,6 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "ReviewInput",
-        "description": "The input of the review without the identifier",
-        "inputFields": [
-          {
-            "name": "rating",
-            "isDeprecated": false,
-            "type": {
-              "kind": "NON_NULL",
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Int"
-              }
-            }
-          },
-          {
-            "name": "text",
-            "isDeprecated": false,
-            "type": {
-              "kind": "NON_NULL",
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "INPUT_OBJECT",
         "name": "OrderInput",
         "description": "The input of the order without the identifier",
         "inputFields": [
@@ -1284,6 +1279,35 @@
           },
           {
             "name": "scheduledAt",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "ReviewInput",
+        "description": "The input of the review without the identifier",
+        "inputFields": [
+          {
+            "name": "rating",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int"
+              }
+            }
+          },
+          {
+            "name": "text",
             "isDeprecated": false,
             "type": {
               "kind": "NON_NULL",
@@ -1533,75 +1557,6 @@
             ]
           },
           {
-            "name": "getReview",
-            "description": "Get an existing review",
-            "isDeprecated": false,
-            "type": {
-              "kind": "OBJECT",
-              "name": "Review"
-            },
-            "args": [
-              {
-                "name": "reviewId",
-                "isDeprecated": false,
-                "type": {
-                  "kind": "NON_NULL",
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "String"
-                  }
-                }
-              }
-            ]
-          },
-          {
-            "name": "reviewsPagedByShopId",
-            "description": "Retrieve reviews page",
-            "isDeprecated": false,
-            "type": {
-              "kind": "OBJECT",
-              "name": "ReviewPage"
-            },
-            "args": [
-              {
-                "name": "shopId",
-                "isDeprecated": false,
-                "type": {
-                  "kind": "NON_NULL",
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "String"
-                  }
-                }
-              },
-              {
-                "name": "page",
-                "isDeprecated": false,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int"
-                }
-              },
-              {
-                "name": "size",
-                "isDeprecated": false,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int"
-                }
-              }
-            ]
-          },
-          {
-            "name": "getProfile",
-            "isDeprecated": false,
-            "type": {
-              "kind": "OBJECT",
-              "name": "Profile"
-            },
-            "args": []
-          },
-          {
             "name": "getOrder",
             "description": "Get an existing order",
             "isDeprecated": false,
@@ -1687,6 +1642,75 @@
                 }
               }
             ]
+          },
+          {
+            "name": "getReview",
+            "description": "Get an existing review",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Review"
+            },
+            "args": [
+              {
+                "name": "reviewId",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "reviewsPagedByShopId",
+            "description": "Retrieve reviews page",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "ReviewPage"
+            },
+            "args": [
+              {
+                "name": "shopId",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              },
+              {
+                "name": "page",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int"
+                }
+              },
+              {
+                "name": "size",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getProfile",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Profile"
+            },
+            "args": []
           },
           {
             "name": "getService",
@@ -1880,94 +1904,6 @@
             ]
           },
           {
-            "name": "createReview",
-            "description": "Create a new review",
-            "isDeprecated": false,
-            "type": {
-              "kind": "OBJECT",
-              "name": "Review"
-            },
-            "args": [
-              {
-                "name": "shopId",
-                "isDeprecated": false,
-                "type": {
-                  "kind": "NON_NULL",
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "String"
-                  }
-                }
-              },
-              {
-                "name": "reviewInput",
-                "isDeprecated": false,
-                "type": {
-                  "kind": "NON_NULL",
-                  "ofType": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "ReviewInput"
-                  }
-                }
-              }
-            ]
-          },
-          {
-            "name": "updateReview",
-            "description": "Update an existing review",
-            "isDeprecated": false,
-            "type": {
-              "kind": "OBJECT",
-              "name": "Review"
-            },
-            "args": [
-              {
-                "name": "reviewId",
-                "isDeprecated": false,
-                "type": {
-                  "kind": "NON_NULL",
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "String"
-                  }
-                }
-              },
-              {
-                "name": "reviewInput",
-                "isDeprecated": false,
-                "type": {
-                  "kind": "NON_NULL",
-                  "ofType": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "ReviewInput"
-                  }
-                }
-              }
-            ]
-          },
-          {
-            "name": "deleteReview",
-            "description": "Delete a review",
-            "isDeprecated": false,
-            "type": {
-              "kind": "SCALAR",
-              "name": "Boolean"
-            },
-            "args": [
-              {
-                "name": "reviewId",
-                "isDeprecated": false,
-                "type": {
-                  "kind": "NON_NULL",
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "String"
-                  }
-                }
-              }
-            ]
-          },
-          {
             "name": "createOrder",
             "description": "Create a new order",
             "isDeprecated": false,
@@ -2077,6 +2013,94 @@
             "args": [
               {
                 "name": "orderId",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "createReview",
+            "description": "Create a new review",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Review"
+            },
+            "args": [
+              {
+                "name": "shopId",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              },
+              {
+                "name": "reviewInput",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "ReviewInput"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateReview",
+            "description": "Update an existing review",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Review"
+            },
+            "args": [
+              {
+                "name": "reviewId",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              },
+              {
+                "name": "reviewInput",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "ReviewInput"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "deleteReview",
+            "description": "Delete a review",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": [
+              {
+                "name": "reviewId",
                 "isDeprecated": false,
                 "type": {
                   "kind": "NON_NULL",

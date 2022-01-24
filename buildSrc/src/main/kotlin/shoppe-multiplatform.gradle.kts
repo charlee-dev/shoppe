@@ -30,6 +30,6 @@ kotlin {
     }
 
     tasks.withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = App.Version.java_version
+        kotlinOptions.jvmTarget = "11"
     }
 }

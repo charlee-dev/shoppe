@@ -6,7 +6,6 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="kermit" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
@@ -14,15 +13,40 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment="updated">
+    <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment=" updated schema">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/buildSrc/src/main/kotlin/Dependencies.kt" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/buildSrc/src/main/kotlin/Dependencies.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/shoppe-multiplatform.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/shoppe-multiplatform.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/androidMain/kotlin/com/adwi/shoppe/data/local/DatabaseDriverFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/androidMain/kotlin/com/adwi/shoppe/data/local/DatabaseDriverFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/api/ApolloProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/api/ApolloProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/Database.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/Database.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ReviewMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ReviewMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ServiceMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ServiceMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopOrderMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopOrderMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/desktopMain/kotlin/com/adwi/shoppe/data/local/DatabaseDriverFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/desktopMain/kotlin/com/adwi/shoppe/data/local/DatabaseDriverFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/AuthRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/AuthRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ReviewRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ReviewRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ServiceRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ServiceRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ShopOrderRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ShopOrderRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ShopRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ShopRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature-auth/src/commonMain/kotlin/com/adwi/shoppe/feature/auth/store/AuthStoreFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-auth/src/commonMain/kotlin/com/adwi/shoppe/feature/auth/store/AuthStoreFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Auth.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Auth.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/adrianwitaszak/.android/avd/Pixel_5_API_31.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -50,6 +74,9 @@
           <activation />
         </task>
         <task path="$PROJECT_DIR$/graphql-backend">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/feature-splash">
           <activation />
         </task>
         <projects_view>
@@ -131,11 +158,11 @@
       <recent name="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data" />
       <recent name="$PROJECT_DIR$/ui-compose/src/androidMain" />
       <recent name="$PROJECT_DIR$/ui-compose/src/androidMain/kotlin/resources/drawable" />
       <recent name="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose" />
       <recent name="$PROJECT_DIR$/feature-settings/src/commonMain/kotlin" />
-      <recent name="$PROJECT_DIR$/feature-details/src/commonMain/kotlin" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="com.adwi.shoppe.data.local" />
@@ -147,7 +174,7 @@
       <recent name="com.adwi.shoppe.feature.details" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.shoppe:graphql-backend [shadowJar]">
+  <component name="RunManager" selected="Android App.Android">
     <configuration name="Android" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="shoppe.app-android" />
       <option name="DEPLOY" value="true" />
@@ -204,6 +231,27 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="shoppe [downloadSchema]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="downloadSchema" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="shoppe [init]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -216,27 +264,6 @@
         <option name="taskNames">
           <list>
             <option value="init" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="shoppe [wrapper]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="wrapper" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -324,19 +351,19 @@
     <list>
       <item itemvalue="Android App.Android" />
       <item itemvalue="Gradle.shoppe:data-datasource [downloadApolloSchema]" />
-      <item itemvalue="Gradle.shoppe [wrapper]" />
       <item itemvalue="Gradle.shoppe [init]" />
       <item itemvalue="Gradle.shoppe [assemble]" />
       <item itemvalue="Gradle.shoppe:graphql-backend [shadowJar]" />
       <item itemvalue="Kotlin.Run server" />
+      <item itemvalue="Gradle.shoppe [downloadSchema]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.shoppe [downloadSchema]" />
+        <item itemvalue="Gradle.shoppe:data-datasource [downloadApolloSchema]" />
         <item itemvalue="Gradle.shoppe:graphql-backend [shadowJar]" />
         <item itemvalue="Gradle.shoppe [assemble]" />
         <item itemvalue="Gradle.shoppe [init]" />
-        <item itemvalue="Gradle.shoppe [wrapper]" />
-        <item itemvalue="Gradle.shoppe:data-datasource [downloadApolloSchema]" />
       </list>
     </recent_temporary>
   </component>
@@ -370,7 +397,7 @@
       <workItem from="1642888728985" duration="19594000" />
       <workItem from="1642952213022" duration="10691000" />
       <workItem from="1642972490878" duration="247000" />
-      <workItem from="1642973416022" duration="1043000" />
+      <workItem from="1642973416022" duration="440000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1642676088116</created>
@@ -561,28 +588,7 @@
       <option name="project" value="LOCAL" />
       <updated>1642962964309</updated>
     </task>
-    <task id="LOCAL-00028" summary="updated">
-      <created>1642973869053</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1642973869053</updated>
-    </task>
-    <task id="LOCAL-00029" summary="updated">
-      <created>1642973879134</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1642973879134</updated>
-    </task>
-    <task id="LOCAL-00030" summary="updated">
-      <created>1642974051117</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1642974051117</updated>
-    </task>
-    <option name="localTasksCounter" value="31" />
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -612,7 +618,8 @@
     <MESSAGE value="added shop upcoming orders panel" />
     <MESSAGE value="added" />
     <MESSAGE value="updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated" />
+    <MESSAGE value=" updated schema" />
+    <option name="LAST_COMMIT_MESSAGE" value=" updated schema" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

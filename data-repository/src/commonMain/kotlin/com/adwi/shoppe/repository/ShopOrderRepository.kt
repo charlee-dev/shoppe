@@ -1,13 +1,13 @@
 package com.adwi.shoppe.repository
 
 import com.adwi.kotlin.data.local.ShopOrder
+import com.adwi.shoppe.CreateOrderMutation
+import com.adwi.shoppe.DeleteOrderMutation
+import com.adwi.shoppe.GetOrderQuery
+import com.adwi.shoppe.UpdateOrderMutation
 import com.adwi.shoppe.data.api.ApolloProvider
 import com.adwi.shoppe.data.local.mapper.toShopOrder
-import com.adwi.shoppe.data.remote.CreateOrderMutation
-import com.adwi.shoppe.data.remote.DeleteOrderMutation
-import com.adwi.shoppe.data.remote.GetOrderQuery
-import com.adwi.shoppe.data.remote.UpdateOrderMutation
-import com.adwi.shoppe.data.remote.type.OrderInput
+import com.adwi.shoppe.type.OrderInput
 import com.apollographql.apollo3.annotations.ApolloExperimental
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 

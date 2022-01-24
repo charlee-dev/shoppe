@@ -5,6 +5,7 @@ import com.adwi.kotlin.data.local.Service
 import com.adwi.kotlin.data.local.Shop
 import com.adwi.kotlin.data.local.ShopOrder
 import com.adwi.kotlin.data.local.UserState
+import com.adwi.shoppe.data.ShoppeDatabase
 
 class Database(databaseDriverFactory: DatabaseDriverFactory) {
     private val database = ShoppeDatabase(databaseDriverFactory.create())

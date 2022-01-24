@@ -1,5 +1,6 @@
 package com.adwi.shoppe.data.local
 
+import com.adwi.shoppe.data.ShoppeDatabase
 import com.squareup.sqldelight.db.SqlDriver
 import com.squareup.sqldelight.sqlite.driver.JdbcSqliteDriver
 import org.kodein.di.DI

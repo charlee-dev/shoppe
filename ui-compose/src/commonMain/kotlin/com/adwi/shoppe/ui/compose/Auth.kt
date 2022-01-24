@@ -103,7 +103,7 @@ fun AuthContent(
                 ShoppeSpacer(modifier = Modifier.weight(2f))
             }
             BottomText(
-                onClick = {},
+                onClick = { component.onSignUp() },
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
                     .padding(bottom = 46.dp)

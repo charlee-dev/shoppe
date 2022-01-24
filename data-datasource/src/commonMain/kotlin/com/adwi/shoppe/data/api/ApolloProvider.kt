@@ -7,7 +7,7 @@ import com.apollographql.apollo3.network.http.BearerTokenInterceptor
 import com.apollographql.apollo3.network.http.LoggingInterceptor
 import com.apollographql.apollo3.network.http.TokenProvider
 
-private val BASE_URL = "https://shoppe-kmm.herokuapp.com/graphql"
+private const val BASE_URL = "https://shoppe-kmm.herokuapp.com/graphql"
 
 class ApolloProvider(databaseDriverFactory: DatabaseDriverFactory) : TokenProvider {
 

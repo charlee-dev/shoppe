@@ -2,6 +2,7 @@ package com.adwi.shoppe.data.local
 
 import android.content.Context
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.adwi.shoppe.data.ShoppeDatabase
 import com.squareup.sqldelight.android.AndroidSqliteDriver
 import com.squareup.sqldelight.db.SqlDriver
 import org.kodein.di.DI

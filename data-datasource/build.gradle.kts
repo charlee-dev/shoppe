@@ -1,3 +1,5 @@
+import com.apollographql.apollo3.gradle.internal.ApolloDownloadSchemaTask
+
 plugins {
     id("shoppe-multiplatform")
     id("com.squareup.sqldelight")
@@ -30,10 +32,15 @@ kotlin {
 
 sqldelight {
     database("ShoppeDatabase") {
-        packageName = "com.adwi.shoppe.data.local"
+        packageName = "com.adwi.shoppe.data"
     }
 }
 
 apollo {
-    packageName.set("com.adwi.shoppe.data.remote")
+    packageName.set("com.adwi.shoppe")
+}
+
+tasks.register("downloadSchema", ApolloDownloadSchemaTask::class.java) {
+    endpoint.set("https://shoppe-kmm.herokuapp.com/graphql")
+    schema.set("/Users/adrianwitaszak/Projects/shoppe/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data/schema.json")
 }

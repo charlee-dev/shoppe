@@ -1,13 +1,13 @@
 package com.adwi.shoppe.repository
 
 import com.adwi.kotlin.data.local.Service
+import com.adwi.shoppe.CreateServiceMutation
+import com.adwi.shoppe.DeleteServiceMutation
+import com.adwi.shoppe.GetServiceQuery
+import com.adwi.shoppe.UpdateServiceMutation
 import com.adwi.shoppe.data.api.ApolloProvider
 import com.adwi.shoppe.data.local.mapper.toService
-import com.adwi.shoppe.data.remote.CreateServiceMutation
-import com.adwi.shoppe.data.remote.DeleteServiceMutation
-import com.adwi.shoppe.data.remote.GetServiceQuery
-import com.adwi.shoppe.data.remote.UpdateServiceMutation
-import com.adwi.shoppe.data.remote.type.ServiceInput
+import com.adwi.shoppe.type.ServiceInput
 import com.apollographql.apollo3.annotations.ApolloExperimental
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 

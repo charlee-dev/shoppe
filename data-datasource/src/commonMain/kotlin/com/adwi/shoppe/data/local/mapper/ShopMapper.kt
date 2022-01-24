@@ -4,11 +4,11 @@ import com.adwi.kotlin.data.local.Review
 import com.adwi.kotlin.data.local.Service
 import com.adwi.kotlin.data.local.Shop
 import com.adwi.kotlin.data.local.ShopOrder
-import com.adwi.shoppe.data.remote.CreateShopMutation
-import com.adwi.shoppe.data.remote.GetProfileQuery
-import com.adwi.shoppe.data.remote.GetShopByIdQuery
-import com.adwi.shoppe.data.remote.ShopsPagedByUserIdQuery
-import com.adwi.shoppe.data.remote.UpdateShopMutation
+import com.adwi.shoppe.CreateShopMutation
+import com.adwi.shoppe.GetProfileQuery
+import com.adwi.shoppe.GetShopByIdQuery
+import com.adwi.shoppe.ShopsPagedByUserIdQuery
+import com.adwi.shoppe.UpdateShopMutation
 
 data class Shops(val results: List<Shop>, val info: ShopsPagedByUserIdQuery.Info?)
 data class ShopDetail(

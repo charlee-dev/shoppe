@@ -1,19 +1,19 @@
 package com.adwi.shoppe.repository
 
 import com.adwi.kotlin.data.local.Shop
+import com.adwi.shoppe.CreateShopMutation
+import com.adwi.shoppe.DeleteShopMutation
+import com.adwi.shoppe.GetProfileQuery
+import com.adwi.shoppe.GetShopByIdQuery
+import com.adwi.shoppe.ShopsPagedByUserIdQuery
+import com.adwi.shoppe.UpdateShopMutation
 import com.adwi.shoppe.data.api.ApolloProvider
 import com.adwi.shoppe.data.local.mapper.ShopDetail
 import com.adwi.shoppe.data.local.mapper.Shops
 import com.adwi.shoppe.data.local.mapper.toShop
 import com.adwi.shoppe.data.local.mapper.toShopDetail
 import com.adwi.shoppe.data.local.mapper.toShops
-import com.adwi.shoppe.data.remote.CreateShopMutation
-import com.adwi.shoppe.data.remote.DeleteShopMutation
-import com.adwi.shoppe.data.remote.GetProfileQuery
-import com.adwi.shoppe.data.remote.GetShopByIdQuery
-import com.adwi.shoppe.data.remote.ShopsPagedByUserIdQuery
-import com.adwi.shoppe.data.remote.UpdateShopMutation
-import com.adwi.shoppe.data.remote.type.ShopInput
+import com.adwi.shoppe.type.ShopInput
 import com.apollographql.apollo3.api.Optional
 
 class ShopRepository(apolloProvider: ApolloProvider) : BaseRepository(apolloProvider) {

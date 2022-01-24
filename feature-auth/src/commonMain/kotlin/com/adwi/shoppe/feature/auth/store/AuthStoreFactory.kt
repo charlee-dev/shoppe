@@ -1,12 +1,12 @@
 package com.adwi.shoppe.feature.auth.store
 
-import com.adwi.shoppe.data.remote.type.UserInput
 import com.adwi.shoppe.data.sdk.prefs.PrefsStore
 import com.adwi.shoppe.feature.auth.store.AuthStore.Intent
 import com.adwi.shoppe.feature.auth.store.AuthStore.Label
 import com.adwi.shoppe.feature.auth.store.AuthStore.Result
 import com.adwi.shoppe.feature.auth.store.AuthStore.State
 import com.adwi.shoppe.repository.AuthRepository
+import com.adwi.shoppe.type.UserInput
 import com.adwi.shoppe.utils.AppCoroutineDispatcher
 import com.apollographql.apollo3.annotations.ApolloExperimental
 import com.arkivanov.mvikotlin.core.store.Reducer
