@@ -69,8 +69,7 @@ internal class ShopsStoreFactory(
                 data class SimpleOrder(val price: Double, val quantity: Double)
 
                 val simpleOrders = shop.orders.map { order ->
-                    val service = serviceRepository.getService(order.serviceId)
-
+                    val service = shop.services.find { it.id == order.serviceId }
                     val simpleOrder = service?.let {
                         SimpleOrder(
                             price = it.price,
@@ -80,7 +79,7 @@ internal class ShopsStoreFactory(
                     simpleOrder
                 }
 
-                val earnings: List<Int>? = simpleOrders?.map {
+                val earnings: List<Int> = simpleOrders.map {
                     it?.price?.times(it.quantity)?.toInt() ?: 0
                 }
 

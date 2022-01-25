@@ -31,7 +31,7 @@ fun Application.configureKodein() = di {
 
     bindSingleton { AuthService(instance()) }
     bindSingleton { OrderService(instance(), instance()) }
-    bindSingleton { ProfileService(instance(), instance()) }
+    bindSingleton { ProfileService(instance(), instance(), instance(), instance(), instance()) }
     bindSingleton { ReviewService(instance()) }
     bindSingleton { ServiceService(instance()) }
     bindSingleton { ShopService(instance(), instance(), instance(), instance()) }

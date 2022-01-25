@@ -13,52 +13,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment="fixed arithmetic bug">
-      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/src/androidMain/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/src/commonMain/kotlin/com/adwi/shoppe/feature/upcomingorders/Module.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/src/commonMain/kotlin/com/adwi/shoppe/feature/upcomingorders/UpcomingOrdersComponent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/src/commonMain/kotlin/com/adwi/shoppe/feature/upcomingorders/UpcomingOrdersComponentImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/src/commonMain/kotlin/com/adwi/shoppe/feature/upcomingorders/store/UpcomingOrdersStore.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/src/commonMain/kotlin/com/adwi/shoppe/feature/upcomingorders/store/UpcomingOrdersStoreFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_auth_desktop.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_dashboard_desktop.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_manager_desktop.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_navigation_desktop.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_planner_desktop.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_root_desktop.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_settings_desktop.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_shopPreview_desktop.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_splash_desktop.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ui_compose_desktop.xml" beforeDir="false" />
+    <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment="added feature upcoming orders">
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/buildSrc/src/main/kotlin/Dependencies.kt" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/buildSrc/src/main/kotlin/Dependencies.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data/Mutations.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data/Mutations.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data/Queries.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data/Queries.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/Database.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/Database.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ReviewMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ReviewMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ServiceMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ServiceMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopOrderMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopOrderMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/sqldelight/com/adwi/kotlin/data/local/order.sq" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/sqldelight/com/adwi/kotlin/data/local/order.sq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ShopRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ShopRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-dashboard/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponentImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponentImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/Module.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/Module.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/store/ShopsStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/store/ShopsStore.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/store/ShopsStoreFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/store/ShopsStoreFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/util/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/util/Constants.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-compose/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Dashboard.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Dashboard.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/DashboardShopPanel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/DashboardShopPanel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/DashboardUpcomingOrderPanel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/DashboardUpcomingOrderPanel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/di/MainModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/di/MainModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/services/ProfileService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/services/ProfileService.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,39 +59,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="shoppe" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="shoppe" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="shoppe" type="f1a62948:ProjectNode" />
-                <item name="data-repository" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="shoppe" type="f1a62948:ProjectNode" />
-                <item name="data-repository" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="shoppe" type="f1a62948:ProjectNode" />
-                <item name="graphql-backend" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="shoppe" type="f1a62948:ProjectNode" />
-                <item name="graphql-backend" type="2d1252cf:ModuleNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -731,7 +659,8 @@
       <workItem from="1642952213022" duration="10691000" />
       <workItem from="1642972490878" duration="247000" />
       <workItem from="1642973416022" duration="440000" />
-      <workItem from="1643135679327" duration="8296000" />
+      <workItem from="1643135679327" duration="8947000" />
+      <workItem from="1643151175720" duration="1562000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1642676088116</created>
@@ -964,7 +893,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643056496682</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="added feature upcoming orders">
+      <created>1643145801026</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1643145801026</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -997,7 +933,8 @@
     <MESSAGE value=" updated schema" />
     <MESSAGE value=" updated mongo" />
     <MESSAGE value=" updated" />
-    <option name="LAST_COMMIT_MESSAGE" value=" updated" />
+    <MESSAGE value="added feature upcoming orders" />
+    <option name="LAST_COMMIT_MESSAGE" value="added feature upcoming orders" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
