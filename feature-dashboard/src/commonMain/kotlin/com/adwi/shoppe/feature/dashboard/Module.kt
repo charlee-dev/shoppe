@@ -2,6 +2,7 @@ package com.adwi.shoppe.feature.dashboard
 
 import com.adwi.shoppe.feature.details.shopPreviewComponentModule
 import com.adwi.shoppe.feature.shops.shopsComponentModule
+import com.adwi.shoppe.feature.upcomingorders.upcomingOrdersComponentModule
 import com.apollographql.apollo3.annotations.ApolloExperimental
 import com.arkivanov.decompose.ComponentContext
 import com.russhwolf.settings.ExperimentalSettingsApi
@@ -18,6 +19,7 @@ val dashboardComponentModule = DI.Module("dashboardComponent") {
 
     import(shopPreviewComponentModule)
     import(shopsComponentModule)
+    import(upcomingOrdersComponentModule)
 
     bindFactory<ComponentContext, DashboardComponent> { componentContext ->
         DashboardComponentImpl(di, componentContext)

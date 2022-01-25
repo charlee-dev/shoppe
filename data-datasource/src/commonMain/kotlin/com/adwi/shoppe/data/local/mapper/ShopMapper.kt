@@ -11,6 +11,7 @@ import com.adwi.shoppe.ShopsPagedByUserIdQuery
 import com.adwi.shoppe.UpdateShopMutation
 
 data class Shops(val results: List<Shop>, val info: ShopsPagedByUserIdQuery.Info?)
+
 data class ShopDetail(
     val shop: Shop,
     val services: List<Service> = listOf(),
@@ -55,12 +56,11 @@ fun GetShopByIdQuery.GetShopById.toShopDetail() =
         orders = orders.map { it.toShopOrder() }
     )
 
-fun GetProfileQuery.Shop.toShop() = Shop(
-    id = id,
-    userId = userId,
-    name = name,
-    description = description,
-    imageUrl = imageUrl
+fun GetProfileQuery.Shop.toShop() = ShopDetail(
+    shop = Shop(id, userId, name, description, imageUrl),
+    services = services.map { it.toService() },
+    reviews = reviews.map { it.toReview() },
+    orders = orders.map { it.toOrder() }
 )
 
 fun CreateShopMutation.CreateShop.toShop() = Shop(

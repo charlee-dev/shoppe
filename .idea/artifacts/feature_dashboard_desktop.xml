@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="feature-dashboard-desktop">
-    <output-path>$PROJECT_DIR$/feature-dashboard/build/libs</output-path>
-    <root id="archive" name="feature-dashboard-desktop.jar">
-      <element id="module-output" name="shoppe.feature-dashboard.desktopMain" />
-    </root>
-  </artifact>
-</component>

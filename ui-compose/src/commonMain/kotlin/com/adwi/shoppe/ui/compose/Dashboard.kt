@@ -14,9 +14,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import com.adwi.shoppe.feature.dashboard.DashboardComponent
 import com.adwi.shoppe.feature.shops.ShopsComponent.Model
+import com.adwi.shoppe.feature.upcomingorders.UpcomingOrdersComponent.OrdersModel
 import com.adwi.shoppe.ui.compose.composables.DashboardGreeting
 import com.adwi.shoppe.ui.compose.composables.DashboardShopsPanel
 import com.adwi.shoppe.ui.compose.composables.DashboardUpcomingOrderPanel
+import com.adwi.shoppe.ui.compose.composables.ShoppeSpacer
 import com.adwi.shoppe.ui.compose.resources.Resources
 import com.arkivanov.decompose.extensions.compose.jetbrains.Children
 
@@ -42,8 +44,11 @@ fun DashboardBody(
     modifier: Modifier = Modifier,
     component: DashboardComponent,
 ) {
-    val model by component.shops.model.collectAsState(Model())
-    val shops by model.shopItems.collectAsState(emptyList())
+    val shopsModel by component.shops.model.collectAsState(Model())
+    val shops by shopsModel.shopItems.collectAsState(emptyList())
+
+    val upcomingOrdersModel by component.upcomingOrders.model.collectAsState(OrdersModel())
+    val upcomingOrders = upcomingOrdersModel.orderItems
 
     Scaffold(
         backgroundColor = MaterialTheme.colors.surface,
@@ -70,11 +75,14 @@ fun DashboardBody(
             }
             DashboardShopsPanel(
                 items = shops,
-                onShopClick = { component.shops.onShopClick(it) }
+                onShopClick = { component.shops.onShopClick(it) },
+                isLoading = shopsModel.isRefreshing
             )
+            ShoppeSpacer(32)
             DashboardUpcomingOrderPanel(
-                items = shops,
-                onOrderClick = { component.shops.onShopClick(it) }
+                items = upcomingOrders,
+                onOrderClick = { component.shops.onShopClick(it) },
+                isLoading = upcomingOrdersModel.isRefreshing
             )
         }
     }

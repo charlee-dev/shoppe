@@ -29,6 +29,7 @@ object Module {
         const val splash = ":feature-splash"
         const val dashboard = ":feature-dashboard"
         const val shops = ":feature-shops"
+        const val upcomingOrders = ":feature-upcomingOrders"
         const val manager = ":feature-manager"
         const val planner = ":feature-planner"
         const val settings = ":feature-settings"

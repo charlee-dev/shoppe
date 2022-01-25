@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="feature-splash-desktop">
-    <output-path>$PROJECT_DIR$/feature-splash/build/libs</output-path>
-    <root id="archive" name="feature-splash-desktop.jar">
-      <element id="module-output" name="shoppe.feature-splash.desktopMain" />
-    </root>
-  </artifact>
-</component>

@@ -3,15 +3,17 @@ CREATE TABLE ShopOrder (
     shopId TEXT NOT NULL,
     userId TEXT NOT NULL,
     serviceId TEXT NOT NULL,
+    serviceName TEXT NOT NULL ,
+    price INTEGER NOT NULL,
     quantity REAL NOT NULL,
-    purchasedAt REAL NOT NULL,
-    scheduledAt REAL NOT NULL,
+    purchasedAt INTEGER NOT NULL,
+    scheduledAt INTEGER NOT NULL,
     paid INTEGER NOT NULL
 );
 
 insertShopOrder:
-INSERT INTO ShopOrder(id, userId, shopId, serviceId, quantity, purchasedAt, scheduledAt, paid)
-VALUES(?, ?, ?, ?, ?, ?, ?, ?);
+INSERT INTO ShopOrder(id, userId, shopId, serviceId, serviceName, price,quantity, purchasedAt, scheduledAt, paid)
+VALUES(?, ?, ?, ?, ?, ?, ?,?,?, ?);
 
 updateShopOrderById:
 UPDATE ShopOrder

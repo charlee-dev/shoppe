@@ -210,6 +210,8 @@ class Database(databaseDriverFactory: DatabaseDriverFactory) {
             shopOrder.userId,
             shopOrder.shopId,
             shopOrder.serviceId,
+            shopOrder.serviceName,
+            shopOrder.price,
             shopOrder.quantity,
             shopOrder.purchasedAt,
             shopOrder.scheduledAt,

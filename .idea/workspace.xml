@@ -13,16 +13,58 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment=" updated">
+    <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment="fixed arithmetic bug">
+      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/src/androidMain/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/src/commonMain/kotlin/com/adwi/shoppe/feature/upcomingorders/Module.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/src/commonMain/kotlin/com/adwi/shoppe/feature/upcomingorders/UpcomingOrdersComponent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/src/commonMain/kotlin/com/adwi/shoppe/feature/upcomingorders/UpcomingOrdersComponentImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/src/commonMain/kotlin/com/adwi/shoppe/feature/upcomingorders/store/UpcomingOrdersStore.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature-upcomingOrders/src/commonMain/kotlin/com/adwi/shoppe/feature/upcomingorders/store/UpcomingOrdersStoreFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_auth_desktop.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_dashboard_desktop.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_manager_desktop.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_navigation_desktop.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_planner_desktop.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_root_desktop.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_settings_desktop.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_shopPreview_desktop.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/feature_splash_desktop.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ui_compose_desktop.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/ShopsComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/ShopsComponent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/buildSrc/src/main/kotlin/Dependencies.kt" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/buildSrc/src/main/kotlin/Dependencies.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data/Mutations.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data/Mutations.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data/Queries.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data/Queries.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/Database.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/Database.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ReviewMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ReviewMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ServiceMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ServiceMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopOrderMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/kotlin/com/adwi/shoppe/data/local/mapper/ShopOrderMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-datasource/src/commonMain/sqldelight/com/adwi/kotlin/data/local/order.sq" beforeDir="false" afterPath="$PROJECT_DIR$/data-datasource/src/commonMain/sqldelight/com/adwi/kotlin/data/local/order.sq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ShopRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data-repository/src/commonMain/kotlin/com/adwi/shoppe/repository/ShopRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature-dashboard/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponentImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponentImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/Module.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/Module.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/store/ShopsStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/store/ShopsStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/store/ShopsStoreFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-shops/src/commonMain/kotlin/com/adwi/shoppe/feature/shops/store/ShopsStoreFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/util/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-backend/src/main/kotlin/com/adwi/shoppe/util/Constants.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-compose/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Dashboard.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Dashboard.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/DashboardShopPanel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/DashboardShopPanel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/DashboardUpcomingOrderPanel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/DashboardUpcomingOrderPanel.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/adrianwitaszak/.android/avd/Pixel_5_API_31.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -61,6 +103,33 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="shoppe" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shoppe" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shoppe" type="f1a62948:ProjectNode" />
+                <item name="data-repository" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shoppe" type="f1a62948:ProjectNode" />
+                <item name="data-repository" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shoppe" type="f1a62948:ProjectNode" />
+                <item name="graphql-backend" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shoppe" type="f1a62948:ProjectNode" />
+                <item name="graphql-backend" type="2d1252cf:ModuleNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -114,7 +183,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
     <property name="full.screen.before.presentation.mode" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/graphql-backend/src/main" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -127,11 +196,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/graphql-backend/src/main" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose" />
       <recent name="$PROJECT_DIR$/ui-compose/src/androidMain/kotlin" />
       <recent name="$PROJECT_DIR$/ui-compose/src/desktopMain" />
-      <recent name="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data-datasource/src/commonMain/graphql/com/adwi/shoppe/data" />
@@ -150,9 +219,289 @@
       <recent name="com.adwi.shoppe.feature.details" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.Android">
+  <component name="RunManager" selected="Kotlin.Run server">
     <configuration name="Android" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="shoppe.app-android" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="data-repository" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="shoppe.data-repository" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="feature-auth" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="shoppe.feature-auth" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="feature-manager" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="shoppe.feature-manager" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="feature-navigation" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="shoppe.feature-navigation" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="feature-planner" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="shoppe.feature-planner" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="feature-settings" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="shoppe.feature-settings" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="feature-shops" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="shoppe.feature-shops" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ui-compose" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="shoppe.ui-compose" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -326,6 +675,14 @@
     </configuration>
     <list>
       <item itemvalue="Android App.Android" />
+      <item itemvalue="Android App.feature-auth" />
+      <item itemvalue="Android App.feature-settings" />
+      <item itemvalue="Android App.data-repository" />
+      <item itemvalue="Android App.feature-shops" />
+      <item itemvalue="Android App.ui-compose" />
+      <item itemvalue="Android App.feature-planner" />
+      <item itemvalue="Android App.feature-manager" />
+      <item itemvalue="Android App.feature-navigation" />
       <item itemvalue="Gradle.shoppe:data-datasource [downloadApolloSchema]" />
       <item itemvalue="Gradle.shoppe [init]" />
       <item itemvalue="Gradle.shoppe [assemble]" />
@@ -374,6 +731,7 @@
       <workItem from="1642952213022" duration="10691000" />
       <workItem from="1642972490878" duration="247000" />
       <workItem from="1642973416022" duration="440000" />
+      <workItem from="1643135679327" duration="8296000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1642676088116</created>

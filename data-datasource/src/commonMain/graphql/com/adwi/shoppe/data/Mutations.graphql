@@ -11,6 +11,8 @@ mutation signIn ($userInput: UserInput!) {
                 quantity
                 scheduledAt
                 serviceId
+                price
+                serviceName
                 shopId
                 userId
             }
@@ -29,6 +31,8 @@ mutation signUp ($userInput: UserInput!) {
                 paid
                 purchasedAt
                 quantity
+                price
+                serviceName
                 scheduledAt
                 serviceId
                 shopId
@@ -49,6 +53,8 @@ mutation createShop ($shopInput: ShopInput!) {
             paid
             purchasedAt
             quantity
+            price
+            serviceName
             scheduledAt
             serviceId
             shopId
@@ -85,6 +91,8 @@ mutation updateShop ($shopId: String!, $shopInput: ShopInput!) {
             purchasedAt
             quantity
             scheduledAt
+            price
+            serviceName
             serviceId
             shopId
             userId
@@ -142,6 +150,8 @@ mutation createOrder ($shopId: String!, $serviceid: String!, $orderInput: OrderI
         paid
         purchasedAt
         quantity
+        price
+        serviceName
         scheduledAt
         serviceId
         shopId
@@ -156,6 +166,8 @@ mutation updateOrder ($orderId: String!, $shopId: String!, $serviceId: String!, 
         purchasedAt
         quantity
         scheduledAt
+        price
+        serviceName
         serviceId
         shopId
         userId

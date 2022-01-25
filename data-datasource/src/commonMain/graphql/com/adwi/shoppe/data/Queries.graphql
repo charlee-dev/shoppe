@@ -11,6 +11,8 @@ query getShopById ($shopId: String!) {
             quantity
             scheduledAt
             serviceId
+            price
+            serviceName
             shopId
             userId
         }
@@ -52,6 +54,8 @@ query shopsPagedByUserId ($page: Int, $size: Int) {
                 purchasedAt
                 quantity
                 scheduledAt
+                price
+                serviceName
                 serviceId
                 shopId
                 userId
@@ -116,6 +120,8 @@ query getProfile {
                 paid
                 purchasedAt
                 quantity
+                price
+                serviceName
                 scheduledAt
                 serviceId
                 shopId
@@ -146,6 +152,8 @@ query getProfile {
                 paid
                 purchasedAt
                 quantity
+                price
+                serviceName
                 scheduledAt
                 serviceId
                 shopId
@@ -161,6 +169,8 @@ query getOrder ($orderId: String!) {
         paid
         purchasedAt
         quantity
+        price
+        serviceName
         scheduledAt
         serviceId
         shopId
@@ -182,6 +192,8 @@ query ordersPagedByUserId ($page: Int, $size: Int) {
             purchasedAt
             quantity
             scheduledAt
+            price
+            serviceName
             serviceId
             shopId
             userId
@@ -202,6 +214,8 @@ query ordersPagedByShopId ($shopId: String!, $page: Int, $size: Int) {
             paid
             purchasedAt
             quantity
+            price
+            serviceName
             scheduledAt
             serviceId
             shopId

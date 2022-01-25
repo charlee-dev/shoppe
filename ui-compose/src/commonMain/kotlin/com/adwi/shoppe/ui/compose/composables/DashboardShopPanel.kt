@@ -49,6 +49,7 @@ fun DashboardShopsPanel(
     modifier: Modifier = Modifier,
     items: List<ShopItem>,
     onShopClick: (String) -> Unit,
+    isLoading: Boolean,
 ) {
     Column(
         modifier = Modifier.fillMaxWidth()
@@ -61,29 +62,35 @@ fun DashboardShopsPanel(
         LazyRow(
             horizontalArrangement = Arrangement.spacedBy(16.dp),
             contentPadding = PaddingValues(horizontal = 16.dp),
-            modifier = modifier
+            modifier = modifier.fillMaxWidth()
         ) {
-            item {
-                if (items.isEmpty()) {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(shopPanelHeight)
-                    ) {
-                        CircularProgressIndicator(
-                            color = MaterialTheme.colors.primary,
-                            modifier = Modifier
-                                .align(Alignment.Center)
-                                .padding(32.dp)
-                        )
-                    }
-                }
-            }
             items(items = items) { item ->
                 DashboardShopPanelItem(
                     shop = item,
                     onShopClick = { onShopClick(item.id) }
                 )
+            }
+        }
+        if (items.isEmpty()) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(shopPanelHeight)
+            ) {
+                if (isLoading) {
+                    CircularProgressIndicator(
+                        color = MaterialTheme.colors.primary,
+                        modifier = Modifier
+                            .align(Alignment.Center)
+                            .padding(32.dp)
+                    )
+                } else {
+                    Text(
+                        text = "No shops",
+                        fontWeight = FontWeight.Light,
+                        modifier = Modifier.align(Alignment.Center)
+                    )
+                }
             }
         }
     }

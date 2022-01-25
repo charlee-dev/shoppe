@@ -6,6 +6,8 @@ import com.adwi.shoppe.feature.dashboard.DashboardComponent.Child
 import com.adwi.shoppe.feature.details.ShopPreviewComponent
 import com.adwi.shoppe.feature.shops.ShopsComponent
 import com.adwi.shoppe.feature.shops.ShopsComponentParams
+import com.adwi.shoppe.feature.upcomingorders.UpcomingOrdersComponent
+import com.adwi.shoppe.feature.upcomingorders.UpcomingOrdersComponentParams
 import com.adwi.shoppe.repository.AuthRepository
 import com.apollographql.apollo3.annotations.ApolloExperimental
 import com.arkivanov.decompose.ComponentContext
@@ -40,6 +42,15 @@ class DashboardComponentImpl(
             onShopClick = { id -> setConfig<Child.ShopDetails>(Config.ShopPreview(id)) }
         )
     )
+
+    override val upcomingOrders: UpcomingOrdersComponent =
+        direct.factory<UpcomingOrdersComponentParams, UpcomingOrdersComponent>()(
+            UpcomingOrdersComponentParams(
+                componentContext = childContext("UpcomingOrders"),
+                onOrderClick = { id -> setConfig<Child.ShopDetails>(Config.OrderPreview(id)) }
+            )
+        )
+
     private val shopPreview = direct.factory<ComponentContext, ShopPreviewComponent>()
 
     private val authRepository by di.instance<AuthRepository>()

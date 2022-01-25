@@ -18,7 +18,7 @@ import com.apollographql.apollo3.api.Optional
 
 class ShopRepository(apolloProvider: ApolloProvider) : BaseRepository(apolloProvider) {
 
-    suspend fun getProfileShops(): List<Shop> {
+    suspend fun getProfileShops(): List<ShopDetail> {
         val response = apolloClient.query(GetProfileQuery()).execute()
         return response.data?.getProfile?.shops?.map { it.toShop() } ?: emptyList()
     }

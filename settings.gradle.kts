@@ -11,8 +11,11 @@ include(
     ":feature-splash",
     ":feature-auth",
     ":feature-navigation",
+
     ":feature-dashboard",
     ":feature-shops",
+    ":feature-upcomingOrders",
+
     ":feature-manager",
     ":feature-planner",
     ":feature-settings",

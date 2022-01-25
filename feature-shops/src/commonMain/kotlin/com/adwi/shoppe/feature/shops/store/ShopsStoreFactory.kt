@@ -1,7 +1,5 @@
 package com.adwi.shoppe.feature.shops.store
 
-import co.touchlab.kermit.Logger
-import com.adwi.shoppe.data.local.mapper.ShopDetail
 import com.adwi.shoppe.feature.shops.ShopsComponent.ShopItem
 import com.adwi.shoppe.feature.shops.store.ShopsStore.Intent
 import com.adwi.shoppe.feature.shops.store.ShopsStore.Result
@@ -67,12 +65,10 @@ internal class ShopsStoreFactory(
 
         private suspend fun getShopItems(): Flow<List<ShopItem>> = flowOf(
             shopRepository.getProfileShops().map { shop ->
-                Logger.v("getShopItems - shop = ${shop.name}")
-                val shopDetail: ShopDetail? = shopRepository.getShop(shop.id)
 
                 data class SimpleOrder(val price: Double, val quantity: Double)
 
-                val simpleOrders = shopDetail?.orders?.map { order ->
+                val simpleOrders = shop.orders.map { order ->
                     val service = serviceRepository.getService(order.serviceId)
 
                     val simpleOrder = service?.let {
@@ -89,12 +85,12 @@ internal class ShopsStoreFactory(
                 }
 
                 val item = ShopItem(
-                    id = shop.id,
-                    name = shop.name,
+                    id = shop.shop.id,
+                    name = shop.shop.name,
                     earnings = earnings?.sum() ?: 0,
-                    reviews = shopDetail?.reviews ?: emptyList(),
-                    orders = shopDetail?.orders ?: emptyList(),
-                    services = shopDetail?.services ?: emptyList()
+                    reviews = shop.reviews,
+                    orders = shop.orders,
+                    services = shop.services
                 )
                 item
             }

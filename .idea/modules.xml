@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/feature-base/shoppe.feature-base.desktopTest.iml" filepath="$PROJECT_DIR$/.idea/modules/feature-base/shoppe.feature-base.desktopTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/feature-library/shoppe.feature-library.desktopTest.iml" filepath="$PROJECT_DIR$/.idea/modules/feature-library/shoppe.feature-library.desktopTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/feature-upcoming-orders/shoppe.feature-upcoming-orders.desktopTest.iml" filepath="$PROJECT_DIR$/.idea/modules/feature-upcoming-orders/shoppe.feature-upcoming-orders.desktopTest.iml" />
     </modules>
   </component>
 </project>

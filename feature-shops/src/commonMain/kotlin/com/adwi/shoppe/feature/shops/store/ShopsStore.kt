@@ -1,9 +1,11 @@
 package com.adwi.shoppe.feature.shops.store
 
 import com.adwi.shoppe.feature.shops.ShopsComponent
+import com.adwi.shoppe.feature.shops.store.ShopsStore.Intent
+import com.adwi.shoppe.feature.shops.store.ShopsStore.State
 import com.arkivanov.mvikotlin.core.store.Store
 
-internal interface ShopsStore : Store<ShopsStore.Intent, ShopsStore.State, Nothing> {
+internal interface ShopsStore : Store<Intent, State, Nothing> {
 
     sealed class Intent {
         object RefreshItems : Intent()
