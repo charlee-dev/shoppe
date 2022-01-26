@@ -45,6 +45,6 @@ class ShopsComponentImpl(
     }
 
     override fun onShopClick(id: String) {
-        onShopClick(id)
+        store.accept(Intent.ClickShop(id))
     }
 }
