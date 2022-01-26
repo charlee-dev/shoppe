@@ -1,16 +1,26 @@
 package com.adwi.shoppe.feature.details
 
-import com.arkivanov.decompose.router.RouterState
-import com.arkivanov.decompose.value.Value
+import kotlinx.coroutines.flow.Flow
 
 interface ShopPreviewComponent {
 
-    val routerState: Value<RouterState<*, Child>>
+    data class ShopItem(
+        val id: String? = "",
+        val name: String = "",
+        val description: String = "",
+    )
+
+    data class Model(
+        val shop: ShopItem = ShopItem(),
+        val isLoading: Boolean = false,
+        val isEditMode: Boolean = false,
+    )
+
+    val model: Flow<Model>
 
     sealed class Child {
-        data class Preview(val name: String) : Child()
-        data class Data2(val name: String) : Child()
+        data class Preview(val shopId: String) : Child()
     }
 
-    fun onData()
+    fun onSaveClick()
 }

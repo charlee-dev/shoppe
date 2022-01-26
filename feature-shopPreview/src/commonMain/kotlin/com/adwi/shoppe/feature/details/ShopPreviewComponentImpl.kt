@@ -1,8 +1,7 @@
 package com.adwi.shoppe.feature.details
 
 import com.arkivanov.decompose.ComponentContext
-import com.arkivanov.decompose.router.RouterState
-import com.arkivanov.decompose.value.Value
+import kotlinx.coroutines.flow.Flow
 import org.kodein.di.DI
 import org.kodein.di.DIAware
 
@@ -11,10 +10,11 @@ class ShopPreviewComponentImpl(
     private val componentContext: ComponentContext,
 ) : ShopPreviewComponent, DIAware, ComponentContext by componentContext {
 
-    override val routerState: Value<RouterState<*, ShopPreviewComponent.Child>>
+    override val model: Flow<ShopPreviewComponent.Model>
         get() = TODO("Not yet implemented")
 
-    override fun onData() {
+    override fun onSaveClick() {
         TODO("Not yet implemented")
     }
+
 }

@@ -63,8 +63,8 @@ class DashboardComponentImpl(
         Logger.v("DashboardComponentImpl router $configuration")
         when (configuration) {
             is Config.None -> Child.Dashboard(this)
-            is Config.ShopPreview -> Child.ShopDetails(shopPreview(componentContext))
-            is Config.OrderPreview -> Child.OrderDetails(shopPreview(componentContext))
+            is Config.ShopPreview -> Child.ShopDetails(shopPreview(componentContext), configuration.shopId)
+            is Config.OrderPreview -> Child.OrderDetails(shopPreview(componentContext), configuration.orderId)
         }
     }
 
@@ -93,9 +93,11 @@ class DashboardComponentImpl(
     private sealed class Config : Parcelable {
         @Parcelize
         object None : Config()
+
         @Parcelize
-        data class ShopPreview(val id: String) : Config()
+        data class ShopPreview(val shopId: String) : Config()
+
         @Parcelize
-        data class OrderPreview(val id: String) : Config()
+        data class OrderPreview(val orderId: String) : Config()
     }
 }

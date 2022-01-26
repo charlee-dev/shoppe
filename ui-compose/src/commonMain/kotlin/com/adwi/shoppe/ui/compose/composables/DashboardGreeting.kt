@@ -23,15 +23,7 @@ fun DashboardGreeting(
         horizontalAlignment = Alignment.Start,
         modifier = modifier
     ) {
-        Text(
-            text = "Hello $name",
-            style = MaterialTheme.typography.h4,
-            color = MaterialTheme.colors.onBackground,
-            letterSpacing = -(2.sp),
-            lineHeight = 20.sp,
-            modifier = Modifier
-                .alpha(.8f)
-        )
+        PageHeader(text = "Hello $name")
         Text(
             text = message,
             color = color,
@@ -42,4 +34,22 @@ fun DashboardGreeting(
             modifier = Modifier.alpha(alpha)
         )
     }
+}
+
+@Composable
+fun PageHeader(
+    modifier: Modifier = Modifier,
+    text: String,
+    color: Color = MaterialTheme.colors.onBackground,
+    alpha: Float = .8f,
+) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.h4,
+        color = color,
+        letterSpacing = -(2.sp),
+        lineHeight = 20.sp,
+        modifier = modifier
+            .alpha(alpha)
+    )
 }

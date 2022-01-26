@@ -1,12 +1,8 @@
 package com.adwi.shoppe.ui.compose
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
 import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -18,6 +14,7 @@ import com.adwi.shoppe.feature.upcomingorders.UpcomingOrdersComponent.OrdersMode
 import com.adwi.shoppe.ui.compose.composables.DashboardGreeting
 import com.adwi.shoppe.ui.compose.composables.DashboardShopsPanel
 import com.adwi.shoppe.ui.compose.composables.DashboardUpcomingOrderPanel
+import com.adwi.shoppe.ui.compose.composables.PageLayout
 import com.adwi.shoppe.ui.compose.composables.ShoppeSpacer
 import com.adwi.shoppe.ui.compose.resources.Resources
 import com.arkivanov.decompose.extensions.compose.jetbrains.Children
@@ -31,8 +28,9 @@ fun DashboardContent(
         it.instance.let { child ->
             when (child) {
                 is DashboardComponent.Child.Dashboard -> DashboardBody(component = child.component)
-                is DashboardComponent.Child.ShopDetails -> ShopPreviewContent(component = child.component)
-                is DashboardComponent.Child.OrderDetails -> ShopPreviewContent(component = child.component)
+                is DashboardComponent.Child.ShopDetails -> ShopPreviewContent(component = child.component, child.shopId)
+                is DashboardComponent.Child.OrderDetails -> ShopPreviewContent(component = child.component,
+                    child.orderId)
             }
         }
     }
@@ -41,7 +39,6 @@ fun DashboardContent(
 @ExperimentalMaterialApi
 @Composable
 fun DashboardBody(
-    modifier: Modifier = Modifier,
     component: DashboardComponent,
 ) {
     val shopsModel by component.shops.model.collectAsState(Model())
@@ -50,40 +47,35 @@ fun DashboardBody(
     val upcomingOrdersModel by component.upcomingOrders.model.collectAsState(OrdersModel())
     val upcomingOrders = upcomingOrdersModel.orderItems
 
-    Scaffold(
-        backgroundColor = MaterialTheme.colors.surface,
-    ) {
-        Column(modifier = modifier.fillMaxSize()) {
+    PageLayout(
+        title = {
             DashboardGreeting(
                 name = "Adrian",
                 modifier = Modifier
-                    .padding(
-                        top = Resources.dimens.barHeight,
-                        start = Resources.dimens.paddingValues
-                    )
+                    .padding(start = Resources.dimens.paddingValues)
             )
-            Button(
-                onClick = { component.signOut() },
-                modifier = Modifier
-                    .padding(
-                        top = Resources.dimens.paddingValues,
-                        start = Resources.dimens.paddingValues,
-                        bottom = Resources.dimens.paddingValues
-                    )
-            ) {
-                Text(text = "Sign out")
-            }
-            DashboardShopsPanel(
-                items = shops,
-                onShopClick = { component.shops.onShopClick(it) },
-                isLoading = shopsModel.isRefreshing
-            )
-            ShoppeSpacer(32)
-            DashboardUpcomingOrderPanel(
-                items = upcomingOrders,
-                onOrderClick = { component.shops.onShopClick(it) },
-                isLoading = upcomingOrdersModel.isRefreshing
-            )
+        },
+    ) {
+        Button(
+            onClick = { component.signOut() },
+            modifier = Modifier
+                .padding(
+                    start = Resources.dimens.paddingValues,
+                    bottom = Resources.dimens.paddingValues
+                )
+        ) {
+            Text(text = "Sign out")
         }
+        DashboardShopsPanel(
+            items = shops,
+            onShopClick = { component.shops.onShopClick(it) },
+            isLoading = shopsModel.isRefreshing
+        )
+        ShoppeSpacer(32)
+        DashboardUpcomingOrderPanel(
+            items = upcomingOrders,
+            onOrderClick = { component.shops.onShopClick(it) },
+            isLoading = upcomingOrdersModel.isRefreshing
+        )
     }
 }

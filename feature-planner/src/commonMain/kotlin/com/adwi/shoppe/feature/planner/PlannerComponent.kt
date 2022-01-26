@@ -8,8 +8,7 @@ interface PlannerComponent {
     val routerState: Value<RouterState<*, Child>>
 
     sealed class Child {
-        data class Data1(val name: String) : Child()
-        data class Data2(val name: String) : Child()
+        data class Data1(val component: PlannerComponent) : Child()
     }
 
     fun onData()

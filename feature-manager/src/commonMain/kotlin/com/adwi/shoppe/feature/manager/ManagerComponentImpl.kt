@@ -6,6 +6,7 @@ import com.adwi.shoppe.feature.manager.store.ManagerStoreFactory
 import com.apollographql.apollo3.annotations.ApolloExperimental
 import com.arkivanov.decompose.ComponentContext
 import com.arkivanov.decompose.router.RouterState
+import com.arkivanov.decompose.router.replaceCurrent
 import com.arkivanov.decompose.router.router
 import com.arkivanov.decompose.value.Value
 import com.arkivanov.essenty.parcelable.Parcelable
@@ -31,7 +32,6 @@ import org.kodein.di.instance
 class ManagerComponentImpl(
     override val di: DI,
     private val componentContext: ComponentContext,
-    onShopClick: (String) -> Unit,
 ) : ManagerComponent, DIAware, ComponentContext by componentContext {
 
     private val shopPreview = direct.factory<ComponentContext, ShopPreviewComponent>()
@@ -41,8 +41,9 @@ class ManagerComponentImpl(
         handleBackButton = true
     ) { configuration, componentContext ->
         when (configuration) {
-            is Config.Manager -> ManagerComponent.Child.Manager
-            is Config.ShopPreview -> ManagerComponent.Child.PreviewShop(shopPreview(componentContext))
+            is Config.Manager -> ManagerComponent.Child.Manager(this)
+            is Config.ShopPreview -> ManagerComponent.Child.PreviewShop(shopPreview(componentContext),
+                configuration.shopId)
         }
     }
 
@@ -52,7 +53,8 @@ class ManagerComponentImpl(
         ManagerStoreFactory(
             storeFactory = direct.instance(),
             shopRepository = direct.instance(),
-            onShopClick = { onShopClick(it) }
+            onShopClick = { setConfig<ManagerComponent.Child.PreviewShop>(Config.ShopPreview(it)) },
+            onAddShopClick = { setConfig<ManagerComponent.Child.PreviewShop>(Config.ShopPreview("")) }
         ).create()
     }
 
@@ -63,6 +65,10 @@ class ManagerComponentImpl(
         )
     }
 
+    override fun onAddShopClick() {
+        store.accept(ManagerStore.Intent.AddShop)
+    }
+
     override fun onShopClick(id: String) {
         store.accept(ManagerStore.Intent.ClickShop(id))
     }
@@ -71,10 +77,21 @@ class ManagerComponentImpl(
         store.accept(ManagerStore.Intent.DeleteShop(id))
     }
 
+    private inline fun <reified T : ManagerComponent.Child> setConfig(
+        config: Config,
+    ) {
+        with(router) {
+            if (state.value.activeChild.instance !is T) {
+                replaceCurrent(config)
+            }
+        }
+    }
+
     private sealed class Config : Parcelable {
         @Parcelize
         object Manager : Config()
+
         @Parcelize
-        data class ShopPreview(val id: String) : Config()
+        data class ShopPreview(val shopId: String) : Config()
     }
 }

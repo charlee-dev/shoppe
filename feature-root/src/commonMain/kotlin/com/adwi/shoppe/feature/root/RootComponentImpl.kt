@@ -80,10 +80,8 @@ internal class RootComponentImpl(
     private sealed class Config : Parcelable {
         @Parcelize
         object Splash : Config()
-
         @Parcelize
         object Library : Config()
-
         @Parcelize
         object Auth : Config()
     }

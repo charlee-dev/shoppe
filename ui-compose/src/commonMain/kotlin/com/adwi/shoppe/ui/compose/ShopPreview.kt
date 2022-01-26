@@ -14,12 +14,12 @@ import com.arkivanov.decompose.extensions.compose.jetbrains.Children
 @Composable
 fun ShopPreviewContent(
     component: ShopPreviewComponent,
+    shopId: String?,
 ) {
     Children(component.routerState) {
         it.instance.let { child ->
             when (child) {
-                is ShopPreviewComponent.Child.Preview -> ShopPreviewBody(component = component)
-                is ShopPreviewComponent.Child.Data2 -> ShopPreviewBody(component = component) // TODO("add another action")
+                is ShopPreviewComponent.Child.Preview -> ShopPreviewBody(component = component, shopId = shopId)
             }
         }
     }
@@ -29,8 +29,9 @@ fun ShopPreviewContent(
 fun ShopPreviewBody(
     modifier: Modifier = Modifier,
     component: ShopPreviewComponent,
+    shopId: String?,
 ) {
     Box(modifier = Modifier.fillMaxSize()) {
-        Text(text = "Preview", modifier = Modifier.align(Alignment.Center))
+        Text(text = "Preview - shopId = $shopId", modifier = Modifier.align(Alignment.Center))
     }
 }

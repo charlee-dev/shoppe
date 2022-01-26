@@ -24,10 +24,11 @@ interface ManagerComponent {
     val routerState: Value<RouterState<*, Child>>
 
     sealed class Child {
-        object Manager : Child()
-        data class PreviewShop(val component: ShopPreviewComponent) : Child()
+        data class Manager(val component: ManagerComponent) : Child()
+        data class PreviewShop(val component: ShopPreviewComponent, val shopId: String) : Child()
     }
 
+    fun onAddShopClick()
     fun onShopClick(id: String)
     fun deleteShop(id: String)
 }
