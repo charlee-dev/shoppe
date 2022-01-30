@@ -13,26 +13,23 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment="added feature Manager">
-      <change afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/LoadingStatusWithMessage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/PageLayout.kt" afterDir="false" />
+    <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment="added feature Manager UI">
+      <change afterPath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/store/ShopPreviewStore.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/store/ShopPreviewStoreFactory.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponent.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponentImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponentImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/ManagerComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/ManagerComponent.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/ManagerComponentImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/ManagerComponentImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/Module.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/Module.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/store/ManagerStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/store/ManagerStore.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/store/ManagerStoreFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/store/ManagerStoreFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-planner/src/commonMain/kotlin/com/adwi/shoppe/feature/planner/PlannerComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-planner/src/commonMain/kotlin/com/adwi/shoppe/feature/planner/PlannerComponent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-root/src/commonMain/kotlin/com/adwi/shoppe/feature/root/RootComponentImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-root/src/commonMain/kotlin/com/adwi/shoppe/feature/root/RootComponentImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature-navigation/src/commonMain/kotlin/com/adwi/shoppe/feature/navigation/Module.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-navigation/src/commonMain/kotlin/com/adwi/shoppe/feature/navigation/Module.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/Module.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/Module.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/ShopPreviewComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/ShopPreviewComponent.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/ShopPreviewComponentImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/ShopPreviewComponentImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Dashboard.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Dashboard.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Manager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Manager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Planner.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Planner.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/ShopPreview.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/ShopPreview.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/DashboardGreeting.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/composables/DashboardGreeting.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -676,7 +673,8 @@
       <workItem from="1642973416022" duration="440000" />
       <workItem from="1643135679327" duration="8947000" />
       <workItem from="1643151175720" duration="4040000" />
-      <workItem from="1643218253259" duration="5534000" />
+      <workItem from="1643218253259" duration="6467000" />
+      <workItem from="1643547979099" duration="6884000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1642676088116</created>
@@ -930,7 +928,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643155264231</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="added feature Manager UI">
+      <created>1643223850880</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1643223850880</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -965,7 +970,8 @@
     <MESSAGE value=" updated" />
     <MESSAGE value="added feature upcoming orders" />
     <MESSAGE value="added feature Manager" />
-    <option name="LAST_COMMIT_MESSAGE" value="added feature Manager" />
+    <MESSAGE value="added feature Manager UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="added feature Manager UI" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

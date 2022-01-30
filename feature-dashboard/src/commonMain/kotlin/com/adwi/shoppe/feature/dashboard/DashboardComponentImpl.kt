@@ -4,6 +4,7 @@ import co.touchlab.kermit.Logger
 import com.adwi.shoppe.data.sdk.prefs.PrefsStore
 import com.adwi.shoppe.feature.dashboard.DashboardComponent.Child
 import com.adwi.shoppe.feature.details.ShopPreviewComponent
+import com.adwi.shoppe.feature.details.ShopPreviewComponentParams
 import com.adwi.shoppe.feature.shops.ShopsComponent
 import com.adwi.shoppe.feature.shops.ShopsComponentParams
 import com.adwi.shoppe.feature.upcomingorders.UpcomingOrdersComponent
@@ -36,6 +37,8 @@ class DashboardComponentImpl(
     private val componentContext: ComponentContext,
 ) : DashboardComponent, DIAware, ComponentContext by componentContext {
 
+    private val shopPreviewComponent by factory<ShopPreviewComponentParams, ShopPreviewComponent>()
+
     override val shops: ShopsComponent = direct.factory<ShopsComponentParams, ShopsComponent>()(
         ShopsComponentParams(
             componentContext = childContext("Shops"),
@@ -47,11 +50,9 @@ class DashboardComponentImpl(
         direct.factory<UpcomingOrdersComponentParams, UpcomingOrdersComponent>()(
             UpcomingOrdersComponentParams(
                 componentContext = childContext("UpcomingOrders"),
-                onOrderClick = { id -> setConfig<Child.ShopDetails>(Config.OrderPreview(id)) }
+                onOrderClick = { id -> setConfig<Child.OrderDetails>(Config.OrderPreview(id)) }
             )
         )
-
-    private val shopPreview = direct.factory<ComponentContext, ShopPreviewComponent>()
 
     private val authRepository by di.instance<AuthRepository>()
     private val prefsStore by di.instance<PrefsStore>()
@@ -63,12 +64,36 @@ class DashboardComponentImpl(
         Logger.v("DashboardComponentImpl router $configuration")
         when (configuration) {
             is Config.None -> Child.Dashboard(this)
-            is Config.ShopPreview -> Child.ShopDetails(shopPreview(componentContext), configuration.shopId)
-            is Config.OrderPreview -> Child.OrderDetails(shopPreview(componentContext), configuration.orderId)
+            is Config.ShopPreview -> Child.ShopDetails(
+                component = shopPreviewComponent(
+                    ShopPreviewComponentParams(
+                        componentContext = componentContext,
+                        shopId = configuration.shopId,
+                        onSaveClick = { setConfig<Child.ShopDetails>(Config.None) },
+                        navigateBack = { setConfig<Child.ShopDetails>(Config.None) }
+                    )
+                ),
+                shopId = configuration.shopId
+            )
+            is Config.OrderPreview -> Child.ShopDetails(
+                component = shopPreviewComponent(
+                    ShopPreviewComponentParams(
+                        componentContext = componentContext,
+                        shopId = configuration.orderId,
+                        onSaveClick = { setConfig<Child.ShopDetails>(Config.None) },
+                        navigateBack = { setConfig<Child.ShopDetails>(Config.None) }
+                    )
+                ),
+                shopId = configuration.orderId
+            ) // TODO("change it to orderComponent")
         }
     }
 
     override val routerState: Value<RouterState<*, Child>> = router.state
+
+    override fun onShopClick(id: String) {
+        setConfig<Child.ShopDetails>(Config.ShopPreview(id))
+    }
 
     override fun onOrderClick(id: String) {
         setConfig<Child.OrderDetails>(Config.OrderPreview(id))

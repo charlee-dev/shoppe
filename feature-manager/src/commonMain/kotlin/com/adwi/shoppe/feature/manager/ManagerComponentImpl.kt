@@ -1,6 +1,8 @@
 package com.adwi.shoppe.feature.manager
 
+import co.touchlab.kermit.Logger
 import com.adwi.shoppe.feature.details.ShopPreviewComponent
+import com.adwi.shoppe.feature.details.ShopPreviewComponentParams
 import com.adwi.shoppe.feature.manager.store.ManagerStore
 import com.adwi.shoppe.feature.manager.store.ManagerStoreFactory
 import com.apollographql.apollo3.annotations.ApolloExperimental
@@ -34,7 +36,7 @@ class ManagerComponentImpl(
     private val componentContext: ComponentContext,
 ) : ManagerComponent, DIAware, ComponentContext by componentContext {
 
-    private val shopPreview = direct.factory<ComponentContext, ShopPreviewComponent>()
+    private val shopPreview by factory<ShopPreviewComponentParams, ShopPreviewComponent>()
 
     private val router = router<Config, ManagerComponent.Child>(
         initialConfiguration = Config.Manager,
@@ -42,8 +44,17 @@ class ManagerComponentImpl(
     ) { configuration, componentContext ->
         when (configuration) {
             is Config.Manager -> ManagerComponent.Child.Manager(this)
-            is Config.ShopPreview -> ManagerComponent.Child.PreviewShop(shopPreview(componentContext),
-                configuration.shopId)
+            is Config.ShopPreview -> ManagerComponent.Child.PreviewShop(
+                component = shopPreview(
+                    ShopPreviewComponentParams(
+                        componentContext = componentContext,
+                        shopId = configuration.shopId,
+                        onSaveClick = { setConfig<ManagerComponent.Child.Manager>(Config.Manager) },
+                        navigateBack = { setConfig<ManagerComponent.Child.Manager>(Config.Manager) }
+                    )
+                ),
+                shopId = configuration.shopId
+            )
         }
     }
 
@@ -53,8 +64,7 @@ class ManagerComponentImpl(
         ManagerStoreFactory(
             storeFactory = direct.instance(),
             shopRepository = direct.instance(),
-            onShopClick = { setConfig<ManagerComponent.Child.PreviewShop>(Config.ShopPreview(it)) },
-            onAddShopClick = { setConfig<ManagerComponent.Child.PreviewShop>(Config.ShopPreview("")) }
+            onShopClick = { setConfig<ManagerComponent.Child.Manager>(Config.ShopPreview(it)) },
         ).create()
     }
 
@@ -66,10 +76,12 @@ class ManagerComponentImpl(
     }
 
     override fun onAddShopClick() {
-        store.accept(ManagerStore.Intent.AddShop)
+        setConfig<ManagerComponent.Child.PreviewShop>(Config.ShopPreview(""))
+        Logger.v("onAddShopClick")
     }
 
     override fun onShopClick(id: String) {
+        Logger.v("onShopClick = $id")
         store.accept(ManagerStore.Intent.ClickShop(id))
     }
 
@@ -80,6 +92,7 @@ class ManagerComponentImpl(
     private inline fun <reified T : ManagerComponent.Child> setConfig(
         config: Config,
     ) {
+        Logger.v("setConfig = $config")
         with(router) {
             if (state.value.activeChild.instance !is T) {
                 replaceCurrent(config)

@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import co.touchlab.kermit.Logger
 import com.adwi.shoppe.feature.manager.ManagerComponent
 import com.adwi.shoppe.ui.compose.composables.LoadingStatusWithMessage
 import com.adwi.shoppe.ui.compose.composables.PageHeader
@@ -63,7 +64,10 @@ fun ManagerBody(
             ) {
                 ShoppeButton(
                     label = { Text(text = "Add shop") },
-                    onClick = { component.onAddShopClick() }
+                    onClick = {
+                        component.onAddShopClick()
+                        Logger.v("Manager - add shop clicked")
+                    }
                 )
             }
         }

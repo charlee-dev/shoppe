@@ -7,7 +7,6 @@ interface ManagerStore : Store<ManagerStore.Intent, ManagerStore.State, Nothing>
 
     sealed class Intent {
         object RefreshItems : Intent()
-        object AddShop : Intent()
         data class ClickShop(val id: String) : Intent()
         data class DeleteShop(val id: String) : Intent()
     }

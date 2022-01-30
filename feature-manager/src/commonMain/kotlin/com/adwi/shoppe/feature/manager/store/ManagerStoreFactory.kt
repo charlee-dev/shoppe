@@ -25,7 +25,6 @@ internal class ManagerStoreFactory(
     private val storeFactory: StoreFactory,
     private val shopRepository: ShopRepository,
     private val onShopClick: (String) -> Unit,
-    private val onAddShopClick: () -> Unit,
 ) {
     fun create(): ManagerStore = object : ManagerStore, Store<Intent, State, Nothing> by storeFactory.create(
         name = "${ManagerStore::class.simpleName}",
@@ -62,7 +61,6 @@ internal class ManagerStoreFactory(
                 is Intent.DeleteShop -> scope.launch {
                     shopRepository.deleteShop(intent.id)
                 }
-                Intent.AddShop -> onAddShopClick
             }
         }
 

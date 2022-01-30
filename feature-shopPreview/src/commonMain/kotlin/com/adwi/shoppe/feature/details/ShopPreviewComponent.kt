@@ -12,7 +12,7 @@ interface ShopPreviewComponent {
 
     data class Model(
         val shop: ShopItem = ShopItem(),
-        val isLoading: Boolean = false,
+        val isRefreshing: Boolean = false,
         val isEditMode: Boolean = false,
     )
 
@@ -21,6 +21,4 @@ interface ShopPreviewComponent {
     sealed class Child {
         data class Preview(val shopId: String) : Child()
     }
-
-    fun onSaveClick()
 }

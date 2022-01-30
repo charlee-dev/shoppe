@@ -13,6 +13,7 @@ interface DashboardComponent {
 
     val routerState: Value<RouterState<*, Child>>
 
+    fun onShopClick(id: String)
     fun onOrderClick(id: String)
     fun signOut()
 
