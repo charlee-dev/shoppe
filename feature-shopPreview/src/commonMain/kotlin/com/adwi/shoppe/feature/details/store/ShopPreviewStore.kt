@@ -7,8 +7,12 @@ interface ShopPreviewStore : Store<ShopPreviewStore.Intent, ShopPreviewStore.Sta
 
     sealed class Intent {
         data class CreateShop(val name: String, val description: String, val imageUrl: String) : Intent()
-        data class UpdateShop(val name: String, val description: String, val imageUrl: String) : Intent()
+        data class UpdateShop(val id: String, val name: String, val description: String, val imageUrl: String) :
+            Intent()
+
         object NavigateBack : Intent()
+        data class SetName(val name: String) : Intent()
+        data class SetDescription(val description: String) : Intent()
     }
 
     sealed class Result {

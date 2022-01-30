@@ -19,7 +19,7 @@ interface DashboardComponent {
 
     sealed class Child {
         data class Dashboard(val component: DashboardComponent) : Child()
-        data class ShopDetails(val component: ShopPreviewComponent, val shopId: String?) : Child()
+        data class ShopDetails(val component: ShopPreviewComponent, val shopId: String) : Child()
         data class OrderDetails(val component: ShopPreviewComponent, val orderId: String) : Child()
     }
 }

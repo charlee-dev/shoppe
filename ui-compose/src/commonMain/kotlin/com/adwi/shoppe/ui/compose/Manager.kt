@@ -27,7 +27,11 @@ fun ManagerContent(
         it.instance.let { child ->
             when (child) {
                 is ManagerComponent.Child.Manager -> ManagerBody(component = child.component)
-                is ManagerComponent.Child.PreviewShop -> ShopPreviewContent(component = child.component, child.shopId)
+                is ManagerComponent.Child.PreviewShop -> ShopPreviewContent(component = child.component,
+                    shopId = child.shopId)
+                is ManagerComponent.Child.EditShop -> ShopPreviewContent(component = child.component,
+                    shopId = child.shopId)
+                is ManagerComponent.Child.AddShop -> ShopPreviewContent(component = child.component, shopId = "")
             }
         }
     }

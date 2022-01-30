@@ -75,6 +75,8 @@ internal class ShopPreviewStoreFactory(
                     onSaveClick(updatedShop != null)
                 }
                 Intent.NavigateBack -> navigateBack
+                is Intent.SetName -> TODO()
+                is Intent.SetDescription -> TODO()
             }
         }
 

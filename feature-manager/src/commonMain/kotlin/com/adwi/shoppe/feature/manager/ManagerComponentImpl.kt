@@ -8,7 +8,7 @@ import com.adwi.shoppe.feature.manager.store.ManagerStoreFactory
 import com.apollographql.apollo3.annotations.ApolloExperimental
 import com.arkivanov.decompose.ComponentContext
 import com.arkivanov.decompose.router.RouterState
-import com.arkivanov.decompose.router.replaceCurrent
+import com.arkivanov.decompose.router.push
 import com.arkivanov.decompose.router.router
 import com.arkivanov.decompose.value.Value
 import com.arkivanov.essenty.parcelable.Parcelable
@@ -64,7 +64,7 @@ class ManagerComponentImpl(
         ManagerStoreFactory(
             storeFactory = direct.instance(),
             shopRepository = direct.instance(),
-            onShopClick = { setConfig<ManagerComponent.Child.Manager>(Config.ShopPreview(it)) },
+            onShopClick = { setConfig<ManagerComponent.Child.Manager>(Config.ShopPreview(it, true)) },
         ).create()
     }
 
@@ -76,13 +76,13 @@ class ManagerComponentImpl(
     }
 
     override fun onAddShopClick() {
-        setConfig<ManagerComponent.Child.PreviewShop>(Config.ShopPreview(""))
+        setConfig<ManagerComponent.Child.PreviewShop>(Config.ShopPreview("", false))
         Logger.v("onAddShopClick")
     }
 
     override fun onShopClick(id: String) {
         Logger.v("onShopClick = $id")
-        store.accept(ManagerStore.Intent.ClickShop(id))
+        setConfig<ManagerComponent.Child.PreviewShop>(Config.ShopPreview(id, true))
     }
 
     override fun deleteShop(id: String) {
@@ -95,7 +95,7 @@ class ManagerComponentImpl(
         Logger.v("setConfig = $config")
         with(router) {
             if (state.value.activeChild.instance !is T) {
-                replaceCurrent(config)
+                push(config)
             }
         }
     }
@@ -105,6 +105,6 @@ class ManagerComponentImpl(
         object Manager : Config()
 
         @Parcelize
-        data class ShopPreview(val shopId: String) : Config()
+        data class ShopPreview(val shopId: String, val isPreview: Boolean) : Config()
     }
 }

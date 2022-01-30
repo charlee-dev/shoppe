@@ -28,9 +28,8 @@ fun DashboardContent(
         it.instance.let { child ->
             when (child) {
                 is DashboardComponent.Child.Dashboard -> DashboardBody(component = child.component)
-                is DashboardComponent.Child.ShopDetails -> ShopPreviewContent(component = child.component, child.shopId)
-                is DashboardComponent.Child.OrderDetails -> ShopPreviewContent(component = child.component,
-                    child.orderId)
+                is DashboardComponent.Child.ShopDetails -> ShopPreviewContent(child.component, child.shopId)
+                is DashboardComponent.Child.OrderDetails -> ShopPreviewContent(child.component, child.orderId)
             }
         }
     }

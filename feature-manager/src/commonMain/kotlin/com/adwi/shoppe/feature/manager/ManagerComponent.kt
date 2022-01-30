@@ -26,6 +26,8 @@ interface ManagerComponent {
     sealed class Child {
         data class Manager(val component: ManagerComponent) : Child()
         data class PreviewShop(val component: ShopPreviewComponent, val shopId: String) : Child()
+        data class EditShop(val component: ShopPreviewComponent, val shopId: String) : Child()
+        data class AddShop(val component: ShopPreviewComponent, val shopId: String) : Child()
     }
 
     fun onAddShopClick()

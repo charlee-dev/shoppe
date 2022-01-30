@@ -13,21 +13,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment="added feature Manager UI">
-      <change afterPath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/store/ShopPreviewStore.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/store/ShopPreviewStoreFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+    <list default="true" id="f1dd4aa3-0952-471b-aa09-f5dd753bbcc2" name="Changes" comment="added Shop Preview logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponentImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-dashboard/src/commonMain/kotlin/com/adwi/shoppe/feature/dashboard/DashboardComponentImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/ManagerComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/ManagerComponent.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/ManagerComponentImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/ManagerComponentImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/Module.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/Module.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/store/ManagerStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/store/ManagerStore.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/store/ManagerStoreFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-manager/src/commonMain/kotlin/com/adwi/shoppe/feature/manager/store/ManagerStoreFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-navigation/src/commonMain/kotlin/com/adwi/shoppe/feature/navigation/Module.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-navigation/src/commonMain/kotlin/com/adwi/shoppe/feature/navigation/Module.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/Module.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/Module.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/ShopPreviewComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/ShopPreviewComponent.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/ShopPreviewComponentImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/ShopPreviewComponentImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/store/ShopPreviewStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/store/ShopPreviewStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/store/ShopPreviewStoreFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature-shopPreview/src/commonMain/kotlin/com/adwi/shoppe/feature/details/store/ShopPreviewStoreFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Dashboard.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Dashboard.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Manager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/Manager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/ShopPreview.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ui-compose/src/commonMain/kotlin/com/adwi/shoppe/ui/compose/ShopPreview.kt" afterDir="false" />
     </list>
@@ -674,7 +669,7 @@
       <workItem from="1643135679327" duration="8947000" />
       <workItem from="1643151175720" duration="4040000" />
       <workItem from="1643218253259" duration="6467000" />
-      <workItem from="1643547979099" duration="6884000" />
+      <workItem from="1643547979099" duration="13042000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1642676088116</created>
@@ -935,7 +930,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643223850880</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="added Shop Preview logic">
+      <created>1643555028677</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1643555028677</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -971,7 +973,8 @@
     <MESSAGE value="added feature upcoming orders" />
     <MESSAGE value="added feature Manager" />
     <MESSAGE value="added feature Manager UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="added feature Manager UI" />
+    <MESSAGE value="added Shop Preview logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Shop Preview logic" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
