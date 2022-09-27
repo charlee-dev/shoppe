@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    id("org.jetbrains.compose") version Libs.AndroidX.Compose.version
+    id("org.jetbrains.compose") version 1.1.1
 }
 
 android {
