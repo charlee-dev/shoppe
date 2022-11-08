@@ -1,6 +1,6 @@
 plugins {
     id("shoppe-multiplatform")
-    id("org.jetbrains.compose") version Libs.AndroidX.Compose.version
+    id("org.jetbrains.compose") version 1.2.1
 }
 
 kotlin {
