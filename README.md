@@ -1,5 +1,3 @@
-# \[ 🚧 Work in progress 👷‍♀️⛏👷🔧️👷🔧 🚧 \]
-
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=shoppe)
 ![](https://img.shields.io/github/stars/adrianwitaszak/shoppe)
 ![](https://img.shields.io/github/forks/adrianwitaszak/shoppe)
@@ -7,7 +5,6 @@
 ![](https://img.shields.io/github/commit-activity/m/adrianwitaszak/shoppe)
 ![](https://img.shields.io/github/last-commit/adrianwitaszak/shoppe)
 ![](https://img.shields.io/github/repo-size/adrianwitaszak/shoppe)
-![](https://img.shields.io/tokei/lines/github/adrianwitaszak/shoppe)
 ![](https://img.shields.io/github/languages/count/adrianwitaszak/shoppe)
 ![](https://img.shields.io/github/languages/top/adrianwitaszak/shoppe)
 
