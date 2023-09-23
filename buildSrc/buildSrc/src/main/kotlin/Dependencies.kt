@@ -53,7 +53,7 @@ object Module {
 
 object Libs {
 
-    const val gradle = "com.android.tools.build:gradle:7.1.0-alpha03"
+    const val gradle = "com.android.tools.build:gradle:7.4.0"
 
     object Kotlin {
         private const val version = "1.6.10"
